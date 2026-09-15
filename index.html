@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Superpollutant Roadmap for Corporate Action — Carbon Containment Lab</title>
+<meta name="description" content="Superpollutants are responsible for roughly half of today's gross warming, yet they remain almost entirely absent from corporate climate targets. Read the executive summary and download the full Carbon Containment Lab roadmap.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     PHASE 1 — MVP LANDING PAGE
+     Climate Week launch build. Carries three pieces of the report:
+       1. Executive Summary (in full)
+       2. Table of Contents
+       3. Acknowledgments
+     plus the PDF download and a slot for the mitigation-measures embed.
+
+     PHASE 2 (post Climate Week) drops in behind the SAME nav and the
+     SAME URL structure — nothing here gets renamed or rebuilt:
+       #summary       stays as the landing summary
+       #measures      the iframe slot below goes live (link pending)
+       #contents      each TOC row gains an href to its chapter page
+       #acknowledgments stays
+       + chapter pages, case studies, and the 200-row database attach
+         underneath the existing nav.
+     Markers through this file are tagged  PHASE 2:
+     ============================================================ -->
+
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+
+<body>
+
+<!-- Header and advancing navigation carried over from the full build.
+     PHASE 2: chapter links are added to this same bar; the four MVP
+     anchors below stay exactly as they are. -->
+<header class="topbar" id="topbar">
+  <div class="shell">
+    <a href="#top" aria-label="Carbon Containment Lab — back to top"><span class="logo" role="img" aria-label="Carbon Containment Lab"></span></a>
+    <nav class="navlinks" aria-label="Page sections">
+      <a href="#summary" style="--nc:var(--green)"><b>01</b> <span class="lbl">Executive summary</span></a>
+      <a href="#measures" style="--nc:var(--rust)"><b>02</b> <span class="lbl">Mitigation measures</span></a>
+      <a href="#contents" style="--nc:var(--navy)"><b>03</b> <span class="lbl">Contents</span></a>
+      <a href="#acknowledgments" style="--nc:var(--umber)"><b>04</b> <span class="lbl">Acknowledgments</span></a>
+    </nav>
+    <a class="navcta" href="https://carboncontainmentlab.org/PDF" target="_blank" rel="noopener">Download the PDF</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="photoslat" style="--pos:center 62%">
+    <img src="assets/img/hero-open-pit-mine.jpg" alt="Striated dusk sky over an open-pit mine, from the cover of the report">
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <div class="herocard">
+      <div class="cobrand">
+        <span class="logo mark" role="img" aria-label="Carbon Containment Lab" style="--lh:52px"></span>
+        <span class="cobrand-rule" aria-hidden="true"></span>
+        <p class="cobrand-label">With support from:</p>
+        <img src="assets/img/beyond-alliance-logo.png" alt="Beyond Alliance, driving market-based climate action" width="380" height="278">
+      </div>
+      <h1>Superpollutant Roadmap for Corporate Action</h1>
+      <p class="hero-sub">Superpollutants cause roughly half of today&rsquo;s gross warming, yet they remain almost entirely absent from corporate climate targets. This roadmap sets out where the abatement sits, what it costs, and three levers for acting on it.</p>
+      <div class="hero-foot">
+        <a class="btn btn-solid" href="https://carboncontainmentlab.org/PDF" target="_blank" rel="noopener">Download the report</a>
+        <a class="btn btn-ghost" href="#summary">Read the executive summary</a>
+      </div>
+    </div>
+  </div>
+  <div class="scrollcue" aria-hidden="true">Scroll<span></span></div>
+</section>
+
+<!-- ============ 01 · EXECUTIVE SUMMARY ============ -->
+<section class="chapter" id="summary" style="--accent:var(--green)">
+
+  <div class="sechead shell">
+    <div class="sechead-grid es-open">
+      <div class="kicker">
+        <h2>Executive<br>Summary</h2>
+        <p class="small">September 2026 &middot; Carbon Containment Lab</p>
+        <!-- Opening image from report p.5, cropped to fill the space
+             beside the opening paragraphs. Decorative, so alt is empty. -->
+        <figure class="es-photo"><img src="assets/img/exec-summary-refinery.jpg" alt="" width="760" height="1004" loading="lazy"></figure>
+      </div>
+      <div>
+        <p class="lede">Superpollutants&mdash;methane, fluorinated gases (F-gases), nitrous oxide, tropospheric ozone, and black carbon&mdash;are responsible for roughly half of today&rsquo;s gross warming,<sup class="fn"><a href="#fn1" id="fnref1" aria-label="Endnote 1">1</a></sup> and cutting them is the fastest and lowest-cost way to slow warming this coming decade.</p>
+        <p><strong class="runin">Superpollutant mitigation is no longer optional, but necessary.</strong> The IPCC&rsquo;s 2&deg;C scenario assumes global superpollutant emissions fall by nearly 50 percent by 2050, representing about 142 Gt CO&#8322;e in cumulative avoided emissions, yet current trajectories keep these emissions essentially flat. That gap&mdash;between what targets call for and what is actually happening&mdash;is the opportunity. Closing it is the focus of this roadmap.</p>
+        <p><strong class="runin">Corporations are positioned to close this gap as few other actors can.</strong> They are the largest source of catalytic private climate finance, hold procurement leverage over the supply chains where many of these emissions concentrate, and can make superpollutant action a market expectation rather than an exception or a coming policy driver.</p>
+      </div>
+    </div>
+
+    <div class="statrow">
+      <div class="stat" style="--accent:var(--green)"><span class="n tnum">~50%</span><p>Of today&rsquo;s gross warming comes from superpollutants</p></div>
+      <div class="stat" style="--accent:var(--rust)"><span class="n tnum">142 Gt</span><p>CO&#8322;e of cumulative avoided emissions in the 2&deg;C scenario</p></div>
+      <div class="stat" style="--accent:var(--navy)"><span class="n tnum">204</span><p>Mitigation measures cataloged, 60% mature and ready to scale</p></div>
+    </div>
+  </div>
+
+  <div class="body shell">
+    <div class="col">
+      <p><strong class="runin">Superpollutant action can help stabilize the climate and avoid tipping points.</strong> Superpollutants are on par with carbon dioxide in that both are responsible for a nearly equal share of the warming reduction required to hold the planet below 2&deg;C. Figure E1 presents projected global temperature outcomes through 2100 under the IPCC&rsquo;s 2&deg;C scenario. It compares the contribution of CO&#8322; mitigation alone versus combined CO&#8322; and superpollutant mitigation. Of the 0.9&deg;C of warming separating the 2&deg;C scenario from the business-as-usual case (reference case), approximately half is attributable to CO&#8322; reductions, with the remaining half attributable to superpollutant reductions.</p>
+      <p>Cutting superpollutant emissions delivers rapid, near-term relief because most are short-lived in the atmosphere. A single ton of methane abated today has largely left the climate system within two decades&mdash;making it a uniquely fast acting lever.</p>
+      <p><strong class="runin">Superpollutant action is a kickstart, not a substitute.</strong> Superpollutant action is an important complement to CO&#8322; action that is essential for limiting the extent of warming. Burning fossil fuel emits reflective sulfate particles that act to cool the planet. The reduction in reflective particles resulting from lower fossil fuel use, an effect known as &ldquo;unmasking,&rdquo; is the reason the &ldquo;CO&#8322; only&rdquo; curve in Figure E1 stays above the black line until 2060. Pairing superpollutant mitigation with decarbonization dampens this effect because most measures reduce warming without removing aerosol cooling.</p>
+      <p>This pairing creates an important sequencing opportunity. Rapid superpollutant abatement, achievable in low-cost, quick-turnaround interventions like leak repair and refrigerant management, will extend the scaling time needed for slower, capital-intensive CO&#8322; reductions in heavy industry and infrastructure.</p>
+    </div>
+
+    <!-- ============ SCROLLYTELLING · FIGURE E1 ============
+         Chart is drawn in the browser from the SERIES data in the
+         scrolly module at the bottom of this file. Each .step sets
+         the chart state named in data-state as it crosses the
+         trigger line. Copy lives here in the HTML, not in the JS. -->
+    <div class="scrolly" data-chart="e1">
+      <figure class="scrolly-graphic">
+        <div class="chartcard">
+          <figcaption class="chart-head">
+            <h4 class="exhibit"><b>Figure E1:</b> Projected temperature changes through 2100 resulting from reference scenario, 2 degrees C scenario with mitigation of CO&#8322;-only, and 2 degrees C scenario with mitigation of both CO&#8322; and superpollutants</h4>
+            <ul class="chart-key" aria-hidden="true">
+              <li data-key="ref"><i class="sw dash" style="--c:var(--c-ref)"></i>Reference Scenario (SSP2-4.5)</li>
+              <li data-key="co2"><i class="sw dash" style="--c:var(--c-co2)"></i>CO&#8322; only 2&deg;C Scenario (SSP1-2.6)</li>
+              <li data-key="sp"><i class="sw solid" style="--c:var(--c-sp)"></i>CO&#8322; + Superpollutants 2&deg;C Scenario (SSP1-2.6)</li>
+            </ul>
+          </figcaption>
+          <div class="chart-body" role="img" aria-label="Line chart of projected global temperature change from 2010 to 2100, relative to 1850 to 1900. The reference scenario keeps rising through the century. The CO2-only 2 degree scenario levels off but runs above the reference line until about 2060. The CO2 plus superpollutants 2 degree scenario flattens near 2 degrees from mid-century. Of the 0.9 degrees separating the reference case from the 2 degree scenario in 2100, about half comes from CO2 reductions and half from superpollutant reductions.">
+            <noscript><p class="chart-nojs">This figure is interactive. The static version appears in the full report PDF.</p></noscript>
+          </div>
+          <p class="chart-foot">SOURCE: Carbon Containment Lab analysis with FaIR v.2.2.4</p>
+        </div>
+      </figure>
+
+      <div class="scrolly-steps">
+        <div class="step" data-state="1">
+          <p class="step-key"><i class="sw dash" style="--c:var(--c-ref)"></i>Reference Scenario</p>
+          <p>Without further mitigation, projected warming keeps climbing through 2100. This business-as-usual path is the reference case.</p>
+        </div>
+        <div class="step" data-state="2">
+          <p class="step-key"><i class="sw dash" style="--c:var(--c-co2)"></i>CO&#8322; only 2&deg;C Scenario</p>
+          <p>The CO&#8322;-only 2&deg;C scenario bends the curve, yet runs above the reference line until about 2060. Burning less fossil fuel also removes reflective sulfate particles that had been cooling the planet, an effect known as unmasking.</p>
+        </div>
+        <div class="step" data-state="3">
+          <p class="step-key"><i class="sw solid" style="--c:var(--c-sp)"></i>CO&#8322; + Superpollutants 2&deg;C Scenario</p>
+          <p>Pairing decarbonization with superpollutant mitigation dampens unmasking, because most measures reduce warming without removing aerosol cooling. Warming levels off near 2&deg;C.</p>
+        </div>
+        <div class="step" data-state="4">
+          <p class="step-key">The 0.9&deg;C gap</p>
+          <p>Of the 0.9&deg;C separating the 2&deg;C scenario from the reference case, roughly half comes from CO&#8322; reductions. The other half comes from cutting superpollutants.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Report p.7: the pull quote sits in the right-hand column beside
+         the running text, so it lives in the gutter here rather than in
+         a full-width break. -->
+    <div class="split">
+      <div class="col">
+        <p><strong class="runin">Companies can&mdash;and must&mdash;be an important part of addressing these potent warmers worldwide.</strong> Companies with substantial superpollutant footprints must take responsibility and reduce them as quickly as possible. But even companies without large amounts of superpollutants in their value chains have opportunities to finance superpollutant elimination projects worldwide through the voluntary carbon market, investing in new facilities, R&amp;D, and sharing best practices. It is vital that all companies take decisive action given the slow pace of government action and the prospect of reaching critical tipping points soon.</p>
+        <p><strong class="runin">Companies are aware of these gases, yet few have committed to reducing them.</strong> A decade of corporate climate action has produced more than 10,000 science-based targets, 1,900 net-zero commitments&mdash;and very few superpollutant strategies. A review of 40 large companies in exposed sectors revealed a large majority mention superpollutants by name in their sustainability reporting, but just a small percentage follow through by setting targets. The story is similar across the corporate sector&mdash;a nearly exclusive focus on CO&#8322; in most net zero portfolios has resulted in insufficient support and attention to superpollutant mitigation projects.</p>
+        <p><strong class="runin">The accounting conventions that allowed this gap are closing.</strong> Superpollutants sit almost entirely in Scope 1&mdash;fugitive methane, refrigerant leakage, industrial F-gases, and nitrous oxide from chemical production&mdash;and Scope 3&mdash;agricultural, supplier, and waste emissions. This distinction is relevant because mitigation measures have stalled in Scopes 1 and 3, precisely where superpollutants tend to concentrate. Meanwhile, the latest Science Based Targets initiative (SBTi) Corporate Net-Zero Standard requires near-term Scope 1 targets to cover 100 percent of Scope 1 emissions, with no materiality carve-out and no more combining it with Scope 2. By early 2028, every large company with fugitive methane, refrigerant leakage, or industrial F-gas emissions will hold a stand-alone, fully covered Scope 1 target. The only question is how fast companies can move on superpollutants before that deadline arrives.</p>
+        <p><strong class="runin">Superpollutant abatement is unusually cheap and remarkably reachable.</strong> A significant share of superpollutant abatement carries negative or low net cost, because the abated substance has commercial value or the intervention is a maintenance practice rather than a capital project.<sup class="fn"><a href="#fn2" id="fnref2" aria-label="Endnote 2">2</a></sup> For example, about 39 percent of oil and gas methane abatement pays for itself outright and nearly all of the remainder is cost-effective below $20 per metric ton of CO&#8322;e.<sup class="fn"><a href="#fn3" id="fnref3" aria-label="Endnote 3">3</a></sup> It is even cheaper per ton if you calculate it using GWP-20. Superpollutant emissions also tend to concentrate in identifiable point sources and equipment classes, such as wells and compressor stations, refrigeration and cooling systems, landfills, and nitric and adipic acid plants, rather than diffusing across every combustion process in an economy like for CO&#8322;. Sources that cannot be reached from inside a company&rsquo;s value chain can be reached via voluntary carbon markets where prices are also low relative to other project types and can still be high quality.</p>
+      </div>
+      <aside class="sidequote">
+        <p class="pull">Companies should act decisively, treating superpollutants not as a footnote to their climate strategy but as its fastest-moving front.</p>
+      </aside>
+    </div>
+
+    <div class="col">
+      <p><strong class="runin">Companies can pursue numerous opportunities and many proven pathways to make a difference.</strong> As part of this research, the Carbon Containment Lab cataloged 204 mitigation measures&mdash;and the list is growing. Many actions mitigate more than one superpollutant and some also abate CO&#8322;. 60 percent of these measures are mature and ready to scale up, some at a cost of less than $1 per ton or even provide net savings. Others requiring more investment are a natural fit for voluntary carbon markets meeting financial additionality requirements. Not every mitigation measure is equally ready; some require work on standards, methodologies or measurement. The most immediate and scalable opportunities lie where the sources are concentrated, the technology is proven, the cost is low, and additional finance can help scale up operations in the next five years.</p>
+      <p><a href="#measures">Explore all 204 mitigation measures &rarr;</a></p>
+    </div>
+
+    <!-- ============ SCROLLYTELLING · FIGURE E2 ============ -->
+    <div class="scrolly" data-chart="e2">
+      <figure class="scrolly-graphic">
+        <div class="chartcard">
+          <figcaption class="chart-head">
+            <h4 class="exhibit"><b>Figure E2:</b> 204 identified superpollutant mitigation measures by primary gas mitigated and measure maturity level</h4>
+            <ul class="chart-key" aria-hidden="true">
+              <li data-key="o3"><i class="sw box" style="--c:var(--c-o3)"></i>Tropospheric Ozone</li>
+              <li data-key="n2o"><i class="sw box" style="--c:var(--c-n2o)"></i>Nitrous Oxide</li>
+              <li data-key="ch4"><i class="sw box" style="--c:var(--c-ch4)"></i>Methane</li>
+              <li data-key="fg"><i class="sw box" style="--c:var(--c-fg)"></i>F-Gases</li>
+              <li data-key="bc"><i class="sw box" style="--c:var(--c-bc)"></i>Black Carbon</li>
+            </ul>
+          </figcaption>
+          <div class="chart-body" role="img" aria-label="Stacked bar chart of 204 mitigation measures across six maturity levels, split by primary gas. Level 1, concept and research: 13. Level 2, proof of concept: 13. Level 3, demonstration and early deployment: 28. Level 4, early adoption: 28. Level 5, scaling and commercialization: 76. Level 6, optimization and system integration: 46. Levels 5 and 6 together hold 122 measures, about 60 percent.">
+            <noscript><p class="chart-nojs">This figure is interactive. The static version appears in the full report PDF.</p></noscript>
+          </div>
+          <p class="chart-foot">SOURCE: Carbon Containment Lab, 2026</p>
+        </div>
+      </figure>
+
+      <div class="scrolly-steps">
+        <div class="step" data-state="1">
+          <p class="step-key">204 measures, six maturity levels</p>
+          <p>The Carbon Containment Lab cataloged 204 mitigation measures and placed each on a maturity scale, from early concept and research to full system integration.</p>
+        </div>
+        <div class="step" data-state="2">
+          <p class="step-key">Five gas families</p>
+          <p>Sorted by the primary gas each one targets, the catalog reaches every superpollutant family. Many measures mitigate more than one, and some also abate CO&#8322;.</p>
+        </div>
+        <div class="step" data-state="3">
+          <p class="step-key">Ready to scale</p>
+          <p>60 percent of measures sit at levels 5 and 6: mature and ready to scale up, some at a cost of less than $1 per ton or even a net saving.</p>
+        </div>
+        <div class="step" data-state="4">
+          <p class="step-key">Still maturing</p>
+          <p>Not every measure is equally ready. Some require work on standards, methodologies, or measurement before they can scale.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <p>Companies are finding ways to finance a range of mitigation measures&mdash;mechanisms include the use of market-based instruments such as insetting, environmental attribute certificates, or carbon credits. Companies are also claiming the emission reductions against their target or as part of a broader contribution or compensation claim.</p>
+      <p>In addition, superpollutant co-benefits are already found in decarbonization strategies familiar to companies. Sustainable aviation fuel, greener cement and concrete, and transitioning fleets to battery electric vehicles all have notable superpollutant co-benefits, such as reducing black carbon, nitrous oxide, and tropospheric ozone precursors like volatile organic compounds (VOCs).</p>
+      <p>Table E1 highlights a few select mitigation measures that are uniquely suited for near-term corporate action with high scalability potential.</p>
+    </div>
+
+    <!-- Table E1 casing, punctuation and styling follow report p.9 exactly. -->
+    <div class="tablewrap">
+      <p class="exhibit" id="table-e1-title"><b>Table E1:</b> Priority superpollutant project types and the mechanisms to support them</p>
+      <div class="scrollx">
+        <table class="rpt" aria-labelledby="table-e1-title">
+          <thead>
+            <tr>
+              <th scope="col">Project Type</th>
+              <th scope="col">Superpollutants Mitigated</th>
+              <th scope="col">Mechanism</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Biomethane from Manure Lagoons/ Anaerobic Digesters</td>
+              <td>Methane, Nitrous Oxide</td>
+              <td>Renewable Natural Gas (RNG) certificates; Spot or Forward purchase of carbon credits</td>
+              <td>Ready for expansion</td>
+            </tr>
+            <tr>
+              <td>Landfill Gas Capture &amp; Destruction</td>
+              <td>Methane</td>
+              <td>Spot or Forward purchase of carbon credits</td>
+              <td>Ready for expansion</td>
+            </tr>
+            <tr>
+              <td>Lifecycle Refrigerant Management</td>
+              <td>F-Gases (various)</td>
+              <td>Spot or Forward purchase of reclaimed gas; and/or carbon credits supporting leak detection &amp; repair or destruction.</td>
+              <td>Ready for expansion</td>
+            </tr>
+            <tr>
+              <td>Rice Methane Mitigation</td>
+              <td>Methane</td>
+              <td>Spot or Forward purchase of carbon credits/Environmental Attribute Certificate (EAC)</td>
+              <td>Gain more MRV experience with deployments</td>
+            </tr>
+            <tr>
+              <td>Plugging Orphaned Oil &amp; Gas Wells</td>
+              <td>Methane</td>
+              <td>Spot or Forward purchase of carbon credits</td>
+              <td>Resolve key measurement and methodology issues</td>
+            </tr>
+            <tr>
+              <td>Industrial N&#8322;O</td>
+              <td>Nitrous Oxide</td>
+              <td>Spot or Forward purchase of carbon credits</td>
+              <td>Resolve key methodology additionality issues</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="col">
+      <p><strong class="runin">Three levers, one strategy.</strong> This roadmap organizes corporate action into three reinforcing levers that reinforce the broader climate commitments companies have already made:</p>
+    </div>
+
+    <!-- Levers reveal one at a time as the row scrolls into view
+         (see the reveal script at the bottom). Without JS, or with
+         reduced motion, all three simply show. -->
+    <ol class="levers" aria-label="Three levers">
+      <li style="--accent:var(--navy); --i:0">
+        <span class="num"><svg class="arr" viewBox="0 0 22 14" aria-hidden="true"><path d="M1 7h19M13.5 1l6.5 6-6.5 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>Lever 1:</span>
+        <h4>Value Chain Intervention</h4>
+        <p>Reducing superpollutant emissions within a company&rsquo;s own operations and value chain.</p>
+      </li>
+      <li style="--accent:var(--umber); --i:1">
+        <span class="num"><svg class="arr" viewBox="0 0 22 14" aria-hidden="true"><path d="M1 7h19M13.5 1l6.5 6-6.5 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>Lever 2:</span>
+        <h4>Voluntary Carbon Markets</h4>
+        <p>Financing verified superpollutant mitigation beyond the value chain through high-integrity carbon credits.</p>
+      </li>
+      <li style="--accent:var(--gold); --i:2">
+        <span class="num"><svg class="arr" viewBox="0 0 22 14" aria-hidden="true"><path d="M1 7h19M13.5 1l6.5 6-6.5 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>Lever 3:</span>
+        <h4>Policy Engagement</h4>
+        <p>Supporting the policies and regulatory frameworks that make value chain and market action durable and widespread.</p>
+      </li>
+    </ol>
+
+    <div class="col">
+      <p><strong class="runin">Early movers show action is a matter of choice, not capability.</strong> They help write the standards and lock in the lowest-cost abatement; those who wait inherit rules written by others and pay more to meet them. In every sector we reviewed, a small group of companies has taken serious action. Danone has committed to cut methane from its fresh-milk supply chain by 30 percent by 2030.<sup class="fn"><a href="#fn4" id="fnref4" aria-label="Endnote 4">4</a></sup> ALDI is converting its U.S. store network to natural refrigerants.<sup class="fn"><a href="#fn5" id="fnref5" aria-label="Endnote 5">5</a></sup> Apple has secured commitments from semiconductor suppliers to abate at least 90 percent of F-gas emissions by 2030.<sup class="fn"><a href="#fn6" id="fnref6" aria-label="Endnote 6">6</a></sup> Workday has signed a four-year offtake agreement to plug orphaned oil and gas wells.<sup class="fn"><a href="#fn7" id="fnref7" aria-label="Endnote 7">7</a></sup> In March 2026, seven companies with the Beyond Alliance&mdash;Amazon, Autodesk, Figma, Google, JPMorgan Chase, Salesforce, and Workday&mdash;launched the Superpollutant Action Initiative, committing $100 million through 2030 to projects that would not otherwise be financed.<sup class="fn"><a href="#fn8" id="fnref8" aria-label="Endnote 8">8</a></sup> More announcements are made every day, and the category is growing quickly.</p>
+
+      <p><strong class="runin">The window is now.</strong> Actions to mitigate superpollutants are a powerful confluence of urgent, immediately available, cost-effective, and fast-acting. The technologies, methods, and markets exist today; what they need is capital and corporate demand at scale. Superpollutant Roadmap for Corporate Action highlights existing abatement opportunities, their cost, and how companies can pursue them through each of the three levers.</p>
+      <p>The Carbon Containment Lab invites companies to act decisively and treat superpollutants not as a footnote to their climate strategy but as its fastest-moving front.</p>
+
+    </div>
+
+    <!-- Endnotes 1–8 carry over verbatim from report p.86. Numbering
+         matches the PDF so the web and print editions cite alike. -->
+    <div class="endnotes" aria-labelledby="endnotes-title">
+      <h3 id="endnotes-title">Endnotes</h3>
+      <ol>
+        <li id="fn1">&ldquo;Super Pollutants&rdquo; Climate &amp; Clean Air Coalition, 22 July 2024. <a href="https://www.ccacoalition.org/news/super-pollutants" target="_blank" rel="noopener">www.ccacoalition.org/news/super-pollutants</a>. <a class="fnback" href="#fnref1" aria-label="Back to text">&#8617;</a></li>
+        <li id="fn2">International Energy Agency, &ldquo;Global Methane Tracker 2025: Methane Abatement Costs in the Energy Sector,&rdquo; IEA, <a href="https://www.iea.org/reports/global-methane-tracker-2025" target="_blank" rel="noopener">https://www.iea.org/reports/global-methane-tracker-2025</a>. <a class="fnback" href="#fnref2" aria-label="Back to text">&#8617;</a></li>
+        <li id="fn3">Ibid. <a class="fnback" href="#fnref3" aria-label="Back to text">&#8617;</a></li>
+        <li id="fn4">Chris Casey, &ldquo;Danone Commits to 30% Methane Reduction from Milk Supply by 2030,&rdquo; Food Dive, January 17, 2023, <a href="https://www.fooddive.com/news/danone-methane-30-percent-2030-dairy-regenerative-environmental-defense-fund/640534/" target="_blank" rel="noopener">https://www.fooddive.com/news/danone-methane-30-percent-2030-dairy-regenerative-environmental-defense-fund/640534/</a>. <a class="fnback" href="#fnref4" aria-label="Back to text">&#8617;</a></li>
+        <li id="fn5">Environmental Investigation Agency, &ldquo;ALDI Becomes First U.S. Food Retailer to Commit to Natural Refrigerants Across All Stores,&rdquo; January 11, 2024, <a href="https://eia.org/blog/aldi-becomes-first-u-s-food-retailer-to-commit-to-natural-refrigerants-across-all-stores/" target="_blank" rel="noopener">https://eia.org/blog/aldi-becomes-first-u-s-food-retailer-to-commit-to-natural-refrigerants-across-all-stores/</a>. <a class="fnback" href="#fnref5" aria-label="Back to text">&#8617;</a></li>
+        <li id="fn6">Apple Inc., &ldquo;Apple Unveils Environmental Progress, Surpassing 60 Percent Reduction in Global Greenhouse Gas Emissions,&rdquo; Apple Newsroom, April 16, 2025, <a href="https://www.apple.com/newsroom/2025/04/apple-surpasses-60-percent-reduction-in-global-greenhouse-gas-emissions/" target="_blank" rel="noopener">https://www.apple.com/newsroom/2025/04/apple-surpasses-60-percent-reduction-in-global-greenhouse-gas-emissions/</a>. <a class="fnback" href="#fnref6" aria-label="Back to text">&#8617;</a></li>
+        <li id="fn7">Heather Clancy, &ldquo;Why Office Software Vendor Workday Is Paying to Plug &lsquo;Orphaned&rsquo; Oil and Gas Wells,&rdquo; Trellis, December 13, 2024, <a href="https://trellis.net/article/workday-tradewater-deal-addresses-methane-emissions/" target="_blank" rel="noopener">https://trellis.net/article/workday-tradewater-deal-addresses-methane-emissions/</a>. <a class="fnback" href="#fnref7" aria-label="Back to text">&#8617;</a></li>
+        <li id="fn8">Carbon Containment Lab, &ldquo;Announcing Our Partnership with Beyond Alliance to Develop a Global Corporate Roadmap on Superpollutant Action,&rdquo; March 3, 2026, <a href="https://carboncontainmentlab.org/updates/posts/superpollutant-roadmap" target="_blank" rel="noopener">https://carboncontainmentlab.org/updates/posts/superpollutant-roadmap</a>. <a class="fnback" href="#fnref8" aria-label="Back to text">&#8617;</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 · MITIGATION MEASURES CATALOGUE ============
+     Copy from "For Leff – microsite text on mitigation measures".
+     The catalogue is CCL's Airtable shared view, embedded below.
+     To swap the view, replace the src on the iframe only.
+     PHASE 2: this same slot holds the filterable measure explorer
+     and the case-study links. Nothing above or below it moves.
+     ========================================================= -->
+<section class="chapter tint" id="measures" style="--accent:var(--rust)">
+  <div class="sechead shell">
+    <div class="sechead-grid">
+      <div class="kicker">
+        <h2>Mitigation<br>Measures</h2>
+        <p class="small">200+ measures &middot; Appendix B</p>
+      </div>
+      <div>
+        <p class="lede">The Superpollutant Mitigation Measures Catalogue: 200+ ways to cut methane, HFCs, black carbon, N&#8322;O, and tropospheric ozone.</p>
+        <p>Superpollutants drive roughly <a href="https://www.ccacoalition.org/news/super-pollutants" target="_blank" rel="noopener">half of today&rsquo;s warming</a>, yet the solutions to cut them are scattered across dozens of technical reports, methodologies, and pilot projects. To help shine light on these important climate solutions, the CC Lab team identified, compiled, and organized over 200 superpollutant mitigation measures into a single, structured database. Measures are classified by primary superpollutant gas affected, source type, whether there are enabling standards in the Voluntary Carbon Market (VCM), or value chain emissions mitigation areas. We also indicate the level of maturity of these pathways in terms of how ready each is for deployment today. Definitions of each field can be found below, in the table following the database. More information about how this was developed can be found in Appendix B of the Roadmap.</p>
+        <p>The Superpollutant Mitigation Measures Catalogue is intended to make it easier for companies, investors, and policymakers to see not just what can be done, but how to act on it. Notably, roughly 70% of measures identified address more than one superpollutant at once, or pair superpollutant mitigation with direct CO&#8322; reductions.</p>
+        <p>The CC Lab intends to continuously expand, refine, and update this database, adding examples and providing even more information on each.</p>
+        <p>We look forward to learning about and featuring additional measures and data. As you explore the data, let us know if you have measures, sources, updates, or examples to add at: <a href="mailto:superpollutants@cclab.org">superpollutants@cclab.org</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="body shell" style="padding-top:0">
+    <p class="exhibit" id="catalogue-title"><b>Superpollutant Mitigation Measures Catalogue</b></p>
+    <div class="embed">
+      <div class="embed-frame">
+        <iframe class="airtable-embed"
+          src="https://airtable.com/embed/appDRXqC3gHRr0Tt7/shr7pL8QE6KIpwSjK?viewControls=on"
+          title="Superpollutant Mitigation Measures Catalogue (Airtable)"
+          aria-labelledby="catalogue-title"
+          loading="lazy"
+          frameborder="0"
+          width="100%" height="533"></iframe>
+      </div>
+    </div>
+
+    <div class="deftable">
+      <p class="exhibit" id="fields-title"><b>Field Definitions</b></p>
+      <div class="scrollx">
+        <table class="rpt defs" aria-labelledby="fields-title">
+          <tbody>
+            <tr><th scope="row">Mitigation Measure</th><td>A physical measure taken to mitigate superpollutants (not a financing, policy, or enabling mechanism).</td></tr>
+            <tr><th scope="row">Source Type</th><td>A classification of the main sources of superpollutants to align with the IPCC Guidelines for National Greenhouse Gas Inventories. In some cases these are tailored to describe the sub-sector most closely tied to the mitigation measure.</td></tr>
+            <tr><th scope="row">Primary Superpollutant</th><td>The primary gas being mitigated through the measure</td></tr>
+            <tr><th scope="row">Other Superpollutants Addressed</th><td>Other superpollutants mitigated through the measure in addition to the primary superpollutant</td></tr>
+            <tr><th scope="row">Maturity Level</th><td>A value between one and six indicating how developed, reliable, and ready a technology or process is for widespread use. Each level is further defined below.</td></tr>
+            <tr><th scope="row">Voluntary Carbon Markets Status</th><td>Availability of methodologies in the Voluntary Carbon Market which incentivise this measure. Active indicates one or more active methodologies; Inactive indicates methodologies that have been retired or invalidated; In development indicates methodologies in progress; Not Available indicates a lack of all of the above.</td></tr>
+            <tr><th scope="row">Value Chain Market Mechanism</th><td>This column shows which market-based value chain actions might be appropriate for the measure, including: a standard existing for an EAC or book-and-claim system; a standard is in development; the activity is well suited to supplier engagement; or the activity is unlikely to be suited to these mechanisms.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="deftable">
+      <p class="exhibit" id="maturity-title"><b>Maturity Level Definitions</b></p>
+      <div class="scrollx">
+        <table class="rpt maturity" aria-labelledby="maturity-title">
+          <thead>
+            <tr>
+              <th scope="col">Maturity Level</th>
+              <th scope="col">Activities at this Maturity Level</th>
+              <th scope="col">Mechanism of Corporate Action</th>
+              <th scope="col">Example Strategic Corporate Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span class="lvl">1</span>Concept &amp; Research</th>
+              <td data-label="Activities at this Maturity Level">Laboratory-scale testing, academic research, and theoretical modeling. Low Technology Readiness Level (TRL 1&ndash;3); high financial and technical risk.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>R&amp;D Funding (internal)</li><li>Sponsored Research (external)</li><li>Sponsor Innovation Prizes</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Fund university labs or early-stage accelerators directly to prove basic chemistry and unlock the intellectual property needed for new tech.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="lvl">2</span>Proof of Concept</th>
+              <td data-label="Activities at this Maturity Level">Small pilot plants, prototype modeling, and life-cycle assessment (LCA) projections. Medium-low readiness (TRL 4&ndash;6); economic viability unproven.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>Corporate Venture Capital (CVC) investment</li><li>Host-Site Provision</li><li>Sponsor Innovation Prizes</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Invest seed equity through CVC arms to build early prototype hardware. Provide an active physical corporate asset to host the first field pilot.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="lvl">3</span>Demonstration &amp; Early Deployment</th>
+              <td data-label="Activities at this Maturity Level">First-of-a-kind commercial projects, early regulatory approvals, and niche adoption. Medium-high readiness (TRL 7&ndash;8); relies on subsidies, grants, or early adopters.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>Project Equity Investments</li><li>VCM Forward Offtake Agreements</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Invest direct equity into first-of-a-kind (FOAK) infrastructure facilities. Back this with a VCM Forward Offtake contract to guarantee an anchor customer.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="lvl">4</span>Early Adoption &amp; Capital Chasm</th>
+              <td data-label="Activities at this Maturity Level">Early-stage commercial rollout, limited to a few pioneering projects globally; focus on reducing high initial capital expenditures. TRL 8&ndash;9. Chasm because standard commercial banks view it as too risky, requiring specialized infrastructure funds, private equity, or loan guarantees.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>Project Equity Investments</li><li>VCM Forward Offtake Agreements</li><li>Market-Based Instruments (Book &amp; Claim / EACs)</li><li>VCM Spot Market Credit Purchases</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Purchase issued spot market credits from already-established projects to offset immediate corporate footprint gaps while long-term infrastructure scales up.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="lvl">5</span>Scaling/ Commercialization</th>
+              <td data-label="Activities at this Maturity Level">Mass manufacturing, standardized supply chains, declining unit costs, and policy backing. Mature (TRL 9); Some standard commercial financing available.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>VCM Spot Market Credit Purchases</li><li>Supplier Engagement Programs</li><li>Standards Writing/Engagement</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Use procurement mandates and low-interest supply-chain financing to force smaller tier-1 and tier-2 partners to adopt mature, off-the-shelf upgrades.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="lvl">6</span>Optimization &amp; System Integration</th>
+              <td data-label="Activities at this Maturity Level">Continuous technological refinement, circular-economy recycling of materials, and fully integrated grid/infrastructure support.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>Supplier Engagement Programs (global)</li><li>Standards Writing/Engagement (global)</li><li>Policy Advocacy &amp; Regulatory Support</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Lobby for codes, mandates, and bans/standards to turn proven Level 5 solutions into mandatory, industry-wide legal requirements.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 · TABLE OF CONTENTS ============ -->
+<section class="chapter" id="contents" style="--accent:var(--navy)">
+  <div class="sechead shell">
+    <div class="sechead-grid toc-align">
+      <div class="kicker">
+        <h2>Table of<br>Contents</h2>
+        <p class="small">136 pages &middot; six chapters &middot; six appendices</p>
+      </div>
+      <div>
+        <p class="lede">What&rsquo;s in the full report.</p>
+        <p>Page numbers refer to the PDF edition. Chapters 01 through 03 set out what superpollutants are, where corporate action stands today, and the climate case for moving. Chapters 04 through 06 work through the three levers in turn.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mirrors report p.3 one to one: two columns (front matter and
+       chapters 01–04 left; 05–06 and back matter right), chapter heads
+       in caps with the chapter color on the second phrase, italic
+       sub-chapters, Appendix F case studies indented.
+       PHASE 2: each .tocrow becomes an <a> pointing at its page. -->
+  <div class="body shell" style="padding-top:0">
+    <div class="tocgrid">
+      <ul class="toccol">
+        <li class="tocback">
+          <ul class="tocfront">
+            <li><div class="tocrow head"><span class="t">Acknowledgments</span><span class="pg">2</span></div></li>
+            <li><div class="tocrow head"><span class="t">Executive Summary</span><span class="pg">5</span></div></li>
+            <li><div class="tocrow head"><span class="t">Foreword</span><span class="pg">11</span></div></li>
+            <li><div class="tocrow head"><span class="t">Introduction</span><span class="pg">12</span></div></li>
+          </ul>
+        </li>
+          <li class="tocch" style="--accent:var(--rust)">
+            <span class="num" aria-hidden="true">01</span>
+            <div>
+              <div class="tocrow head"><span class="t">What Are <span class="hl">Superpollutants?</span></span><span class="pg">14</span></div>
+              <ul class="tocsub">
+                <li><div class="tocrow"><span class="t">Methane</span><span class="pg">18</span></div></li>
+                <li><div class="tocrow"><span class="t">Nitrous Oxide</span><span class="pg">20</span></div></li>
+                <li><div class="tocrow"><span class="t">Ozone-Depleting Substances and F-gases</span><span class="pg">22</span></div></li>
+                <li><div class="tocrow"><span class="t">Tropospheric Ozone</span><span class="pg">25</span></div></li>
+                <li><div class="tocrow"><span class="t">Black Carbon</span><span class="pg">26</span></div></li>
+              </ul>
+            </div>
+          </li>
+          <li class="tocch" style="--accent:var(--green)">
+            <span class="num" aria-hidden="true">02</span>
+            <div>
+              <div class="tocrow head"><span class="t">The State of Corporate <span class="hl">Superpollutant Action</span></span><span class="pg">28</span></div>
+              <ul class="tocsub">
+                <li><div class="tocrow"><span class="t">Companies are naming the gases without setting goals against them</span><span class="pg">30</span></div></li>
+                <li><div class="tocrow"><span class="t">The gap persists for reasons specific to superpollutants</span><span class="pg">32</span></div></li>
+                <li><div class="tocrow"><span class="t">Changing rules are impacting superpollutant footprints</span><span class="pg">33</span></div></li>
+                <li><div class="tocrow"><span class="t">Pathfinder companies show moving from awareness to action is a matter of choice</span><span class="pg">34</span></div></li>
+                <li><div class="tocrow"><span class="t">Implications for corporate strategy</span><span class="pg">36</span></div></li>
+              </ul>
+            </div>
+          </li>
+          <li class="tocch" style="--accent:var(--azure)">
+            <span class="num" aria-hidden="true">03</span>
+            <div>
+              <div class="tocrow head"><span class="t">The Climate Case for <span class="hl">Superpollutant Action</span></span><span class="pg">37</span></div>
+              <ul class="tocsub">
+                <li><div class="tocrow"><span class="t">The pathway to 2&deg;C assumes deep superpollutant reductions by 2050</span><span class="pg">39</span></div></li>
+                <li><div class="tocrow"><span class="t">Reducing warming in the near-term requires cutting superpollutants</span><span class="pg">41</span></div></li>
+                <li><div class="tocrow"><span class="t">Implications for corporate strategy</span><span class="pg">43</span></div></li>
+              </ul>
+            </div>
+          </li>
+          <li class="tocch" style="--accent:var(--navy)">
+            <span class="num" aria-hidden="true">04</span>
+            <div>
+              <div class="tocrow head"><span class="t">Lever 1: <span class="hl">Value Chain Intervention</span></span><span class="pg">45</span></div>
+              <ul class="tocsub">
+                <li><div class="tocrow"><span class="t">Finding superpollutant hotspots</span><span class="pg">47</span></div></li>
+                <li><div class="tocrow"><span class="t">Three mechanisms for action</span><span class="pg">50</span></div></li>
+                <li><div class="tocrow"><span class="t">Finding corporate superpollutant hotspots</span><span class="pg">52</span></div></li>
+                <li><div class="tocrow"><span class="t">A decision framework for action</span><span class="pg">53</span></div></li>
+                <li><div class="tocrow"><span class="t">Seeing mitigation in action: Value chain project examples</span><span class="pg">59</span></div></li>
+              </ul>
+            </div>
+          </li>
+      </ul>
+      <ul class="toccol">
+          <li class="tocch" style="--accent:var(--umber)">
+            <span class="num" aria-hidden="true">05</span>
+            <div>
+              <div class="tocrow head"><span class="t">Lever 2: <span class="hl">Voluntary Carbon Markets</span></span><span class="pg">63</span></div>
+              <ul class="tocsub">
+                <li><div class="tocrow"><span class="t">Why Superpollutant Credits Are Different</span><span class="pg">66</span></div></li>
+                <li><div class="tocrow"><span class="t">Where to Start: A Ladder, Not a Menu</span><span class="pg">71</span></div></li>
+                <li><div class="tocrow"><span class="t">Selection: What to Look for in Superpollutant Credits</span><span class="pg">73</span></div></li>
+              </ul>
+            </div>
+          </li>
+          <li class="tocch" style="--accent:var(--gold)">
+            <span class="num" aria-hidden="true">06</span>
+            <div>
+              <div class="tocrow head"><span class="t">Lever 3: <span class="hl">Policy Engagement</span></span><span class="pg">77</span></div>
+              <ul class="tocsub">
+                <li><div class="tocrow"><span class="t">Superpollutant policy landscape today</span><span class="pg">80</span></div></li>
+                <li><div class="tocrow"><span class="t">Corporate action in superpollutant policy</span><span class="pg">82</span></div></li>
+              </ul>
+            </div>
+          </li>
+          <li class="tocback">
+            <ul class="tocfront">
+              <li><div class="tocrow head"><span class="t">Conclusion</span><span class="pg">85</span></div></li>
+              <li><div class="tocrow head"><span class="t">Endnotes</span><span class="pg">86</span></div></li>
+              <li><div class="tocrow head app"><span class="t">Appendix A<span class="sub">Radiative Forcing and GWP Values at 20 and 100 Years</span></span><span class="pg">96</span></div></li>
+              <li><div class="tocrow head app"><span class="t">Appendix B<span class="sub">Selecting Superpollutant Measures</span></span><span class="pg">100</span></div></li>
+              <li><div class="tocrow head app"><span class="t">Appendix C<span class="sub">Modeling Parameters for Chapter 3</span></span><span class="pg">105</span></div></li>
+              <li><div class="tocrow head app"><span class="t">Appendix D<span class="sub">Criteria for Selecting Market-Based Value-Chain Interventions</span></span><span class="pg">107</span></div></li>
+              <li><div class="tocrow head app"><span class="t">Appendix E<span class="sub">Selecting Carbon Credits: Criteria and Application</span></span><span class="pg">110</span></div></li>
+              <li><div class="tocrow head app"><span class="t">Appendix F<span class="sub">Carbon Credit Case Studies</span></span><span class="pg">116</span></div>
+                <ul class="tocsub indent">
+                  <li><div class="tocrow"><span class="t">Industrial N&#8322;O Abatement</span><span class="pg">117</span></div></li>
+                  <li><div class="tocrow"><span class="t">ODS and HFC Destruction</span><span class="pg">119</span></div></li>
+                  <li><div class="tocrow"><span class="t">Rice Methane Mitigation</span><span class="pg">121</span></div></li>
+                  <li><div class="tocrow"><span class="t">Anaerobic Digesters</span><span class="pg">123</span></div></li>
+                  <li><div class="tocrow"><span class="t">Landfill Gas Capture, Destruction, and Utilization</span><span class="pg">125</span></div></li>
+                  <li><div class="tocrow"><span class="t">Plugging Orphaned Oil and Gas Wells</span><span class="pg">127</span></div></li>
+                </ul>
+              </li>
+              <li><div class="tocrow head"><span class="t">Appendix Endnotes</span><span class="pg">129</span></div></li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 · ACKNOWLEDGMENTS ============
+     Mirrors report p.2: Carbon Containment Lab and Special Thanks on
+     the left; Advisory Council and Editing and Production on the right.
+     Advisory names are set Name – Company per the client's markup. -->
+<section class="chapter tint" id="acknowledgments" style="--accent:var(--umber)">
+  <div class="sechead shell">
+    <div class="kicker">
+      <h2>Acknowledg&shy;ments</h2>
+    </div>
+  </div>
+
+  <div class="body shell" style="padding-top:0">
+    <div class="ackgrid">
+      <div>
+        <div class="ackblock">
+          <h3>Carbon Containment Lab:</h3>
+          <p><strong>Authors:</strong> Anastasia O&rsquo;Rourke, John Nixon, &Ouml;znur &Ouml;zt&uuml;rk, Sin&eacute;ad Crotty, Drew Pomerantz, Jack Lowenthal, and Dean Takahashi.</p>
+          <p><em>With support from:</em> Puneet Chhabra, Justin Freiberg, Isabella Garrioch, Nicole Gotthardt, Selin G&ouml;ren, Leslie Guerra, Chi Nguyen, Ethan Olim, Violet Dorsey-Reyes, and Olivia Rhodes.</p>
+          <p><strong>Copyrights and Citation</strong> &copy; 2026 Carbon Containment Lab. This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0). You are free to share, copy, and adapt this material for any purpose, provided appropriate credit is given. To view a copy of this license, visit <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">https://creativecommons.org/licenses/by/4.0/</a>.</p>
+          <p>The views expressed in this paper are those of the authors and do not necessarily reflect the positions of Beyond Alliance, or any of the individuals and organizations acknowledged herein.</p>
+          <p><strong>Suggested Citation:</strong> O&rsquo;Rourke, A., Nixon, J., &Ouml;zt&uuml;rk, &Ouml;., Crotty, S., Pomerantz, D., Lowenthal, J., Takahashi, D. (2026). Superpollutant Roadmap for Corporate Action. Carbon Containment Lab. Published September 23, 2026. <a href="https://www.superpollutantroadmap.org" target="_blank" rel="noopener">https://www.superpollutantroadmap.org</a></p>
+        </div>
+
+        <div class="ackblock">
+          <h3>Special Thanks:</h3>
+          <p>Audrey Parker (MIT), Dr. Mary Kate Mitchell Lane (MIT), and Prof. Desir&eacute;e Plata (MIT) and the attendees of their &ldquo;Financing the Voluntary Carbon Market at Scale: Opportunities in Superpollutants&rdquo; conference session.</p>
+          <p>Industrial Economics, Inc. which contributed to the value-chain chapter&mdash;Angela Vitulli, Diego Castillo, Tessa Lee, Sulagna Datta, and Kaitlyn DeGroot.</p>
+        </div>
+
+        <div class="ackblock">
+          <h3>Mitigation Measures Catalogue Contributors:</h3>
+          <ul class="contributors">
+            <li>Anastasia O&rsquo;Rourke &ndash; <em>Senior Managing Director, CC Lab</em></li>
+            <li>Nicole Gotthardt &ndash; <em>Analyst, CC Lab</em></li>
+            <li>Olivia Rhodes &ndash; <em>Independent Consultant</em></li>
+            <li>Berta Lascuevas Laguna &ndash; <em>Associate, CC Lab</em></li>
+            <li>Justin Freiberg &ndash; <em>Managing Director, CC Lab</em></li>
+            <li>Drew Pomerantz &ndash; <em>Director, CC Lab</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="ackblock">
+          <h3>Advisory Council:</h3>
+          <p>This roadmap benefited from the expert consultative input of an Advisory Council helping the authors think through core scientific, economic, policy, and implementation issues. We are grateful for their time and talents. Their participation in our process does not imply their or their organization&rsquo;s endorsement of the resulting work. Responsibility for this roadmap&rsquo;s content and recommendations rests solely with Carbon Containment Lab.</p>
+          <ul class="council">
+            <li>Alex Kats-Rubin &ndash; <em>Amazon</em></li>
+            <li>Beth Trask &ndash; <em>Rainier Climate</em></li>
+            <li>Chris Costello &ndash; <em>Environmental Defense Fund</em></li>
+            <li>Claire Henly &ndash; <em>Super Pollutant Action Alliance</em></li>
+            <li>Donna Lee &ndash; <em>Calyx Global</em></li>
+            <li>Gabrielle Dreyfus &ndash; <em>Institute for Governance &amp; Sustainable Development</em></li>
+            <li>Ilissa Ocko &ndash; <em>Spark Climate Solutions</em></li>
+            <li>Jessica Seddon &ndash; <em>Yale University</em></li>
+            <li>Lauren Frisch &ndash; <em>Independent Expert</em></li>
+            <li>Luke Pritchard &ndash; <em>Beyond Alliance</em></li>
+            <li>Marcelo Mena &ndash; <em>Global Methane Hub</em></li>
+            <li>Nathan Borgford-Parnell &ndash; <em>Climate and Clean Air Coalition</em></li>
+            <li>Randy Spock &ndash; <em>Google</em></li>
+            <li>Rick Duke &ndash; <em>Gigaton Strategies</em></li>
+            <li>Yannish Naik &ndash; <em>Clean Air Fund</em></li>
+          </ul>
+        </div>
+
+        <div class="ackblock">
+          <h3>Editing and Production:</h3>
+          <p><strong class="leff">LEFF</strong> Scott Leff, Clairissa Myatt, Katie Parry, and Laura Brown</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COLOPHON / DOWNLOAD ============ -->
+<section class="colophon" id="download">
+  <div class="photoslat" style="--pos:center 55%">
+    <img src="assets/img/colophon-open-pit-mine.jpg" alt="Terraced walls of an open-pit mine at dusk">
+  </div>
+  <div class="inner">
+    <div class="colocard">
+      <p class="eyebrow" style="--accent:var(--navy)">The full report</p>
+      <p>&copy; 2026 Carbon Containment Lab<br>Superpollutant Roadmap for Corporate Action<br>September 2026</p>
+      <p><a class="btn btn-solid" href="https://carboncontainmentlab.org/PDF" target="_blank" rel="noopener">Download the report</a></p>
+      <span class="logo" role="img" aria-label="Carbon Containment Lab"></span>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="shell">
+    <span class="logo" role="img" aria-label="Carbon Containment Lab"></span>
+    <p class="small">&copy; 2026 Carbon Containment Lab &middot; Superpollutant Roadmap for Corporate Action &middot; September 2026</p>
+    <a class="small" href="#top">Back to top &uarr;</a>
+  </div>
+</footer>
+</main>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/scrolly-charts.js"></script>
+<script src="assets/js/levers-reveal.js"></script>
+
+</body>
+</html>

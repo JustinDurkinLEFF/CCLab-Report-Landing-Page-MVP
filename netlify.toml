@@ -1,0 +1,27 @@
+# Static site: no build step. Netlify serves the repository root as-is.
+[build]
+  publish = "."
+  command = ""
+
+# Every response
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # PREVIEW ONLY: keeps the client preview out of search results.
+    # Delete this line when the site goes live.
+    X-Robots-Tag = "noindex, nofollow"
+
+# Pages revalidate on every visit so the client always sees the latest push.
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# CSS, JS and images can be cached, but only for an hour. File names are
+# not fingerprinted, so a long cache would hold stale assets after a push.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

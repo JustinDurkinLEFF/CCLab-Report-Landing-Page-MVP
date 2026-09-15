@@ -1,0 +1,608 @@
+/* ============================================================
+   CCL BRAND FACES — Whyte (ABC Dinamo) + Signifier (Klim)
+
+   Every src below is local() only. No font file is served by this
+   stylesheet and no font binary lives in this repository.
+
+   Effect: on a machine where the licensed desktop fonts are installed
+   (a designer's Mac), the page renders in the real brand faces. Anywhere
+   else — Netlify preview, the client's browser, CCL's AWS box — these
+   declarations fail silently and the page falls back to Archivo and
+   Newsreader, which are declared next in the stack.
+
+   FOR THE IMPLEMENTING DEVELOPER
+   When CCL obtains a WEBFONT license, the foundries supply .woff2 kits.
+   Drop those into /assets/fonts and replace each local() with, e.g.:
+
+       src: url("../fonts/whyte-bold.woff2") format("woff2");
+
+   Keep the weight/style mapping below exactly as it is.
+
+   NOTE ON FAMILY NAMING (this trips people up)
+   The desktop files do not use one family with four weights. "Whyte
+   Book" is its own family; "Whyte" holds Regular and Bold. Signifier
+   splits the same way. The declarations below flatten both into a
+   single family per typeface with proper numeric weights.
+   ============================================================ */
+
+/* ---------- Whyte → display, UI, data labels ---------- */
+@font-face{
+  font-family:"Whyte"; font-weight:400; font-style:normal; font-display:swap;
+  src:local("Whyte Book"), local("Whyte-Book"), local("WhyteBook");
+}
+@font-face{
+  font-family:"Whyte"; font-weight:400; font-style:italic; font-display:swap;
+  src:local("Whyte Book Italic"), local("Whyte-BookItalic");
+}
+@font-face{
+  font-family:"Whyte"; font-weight:500; font-style:normal; font-display:swap;
+  src:local("Whyte Regular"), local("Whyte"), local("Whyte-Regular");
+}
+@font-face{
+  font-family:"Whyte"; font-weight:500; font-style:italic; font-display:swap;
+  src:local("Whyte Regular Italic"), local("Whyte Italic"), local("Whyte-Italic");
+}
+@font-face{
+  font-family:"Whyte"; font-weight:600; font-style:normal; font-display:swap;
+  src:local("Whyte Bold"), local("Whyte-Bold");
+}
+@font-face{
+  font-family:"Whyte"; font-weight:700; font-style:normal; font-display:swap;
+  src:local("Whyte Bold"), local("Whyte-Bold");
+}
+@font-face{
+  font-family:"Whyte"; font-weight:700; font-style:italic; font-display:swap;
+  src:local("Whyte Bold Italic"), local("Whyte-BoldItalic");
+}
+
+/* ---------- Signifier → body text, pull quotes ---------- */
+@font-face{
+  font-family:"Signifier"; font-weight:300; font-style:normal; font-display:swap;
+  src:local("Signifier Regular"), local("Signifier"), local("Signifier-Regular");
+}
+@font-face{
+  font-family:"Signifier"; font-weight:300; font-style:italic; font-display:swap;
+  src:local("Signifier Italic"), local("Signifier-RegularItalic");
+}
+@font-face{
+  font-family:"Signifier"; font-weight:400; font-style:normal; font-display:swap;
+  src:local("Signifier Regular"), local("Signifier"), local("Signifier-Regular");
+}
+@font-face{
+  font-family:"Signifier"; font-weight:400; font-style:italic; font-display:swap;
+  src:local("Signifier Italic"), local("Signifier-RegularItalic");
+}
+@font-face{
+  font-family:"Signifier"; font-weight:500; font-style:normal; font-display:swap;
+  src:local("Signifier Medium"), local("Signifier-Medium");
+}
+@font-face{
+  font-family:"Signifier"; font-weight:500; font-style:italic; font-display:swap;
+  src:local("Signifier Medium Italic"), local("Signifier-MediumItalic");
+}
+
+/* ============================================================
+   Carbon Containment Lab — Superpollutant Roadmap
+   Palette, type and photographic treatment derived from the
+   InDesign report (Whyte → Archivo, Signifier → Newsreader).
+   ============================================================ */
+
+:root{
+  --logo:url("../img/ccl-logo.svg");
+  --logo-stacked:url("../img/ccl-logo-stacked.svg");
+  --paper:#F6F6F4;
+  --warm:#F9F1EE;
+  --panel:#EAECF1;
+  --ink:#2E2822;
+  --ink-2:#615A51;
+  --ink-3:#8C857B;
+  --rule:rgba(46,40,34,.16);
+  --rule-soft:rgba(46,40,34,.09);
+
+  --green:#0F754D;
+  --rust:#C16A3E;
+  --azure:#467ED1;
+  --navy:#004D85;
+  --umber:#6A4D15;
+  --gold:#BD8100;
+
+  --accent:var(--green);
+  --accent-tint:rgba(15,117,77,.10);
+
+  --shell:min(1240px, 92vw);
+  --measure:clamp(38ch, 62ch, 70ch);
+
+  --f-display:"Whyte","Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-text:"Signifier","Newsreader",Georgia,"Times New Roman",serif;
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --radius:3px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--f-text); font-size:clamp(1.02rem,.55vw + .92rem,1.14rem);
+  line-height:1.72; font-weight:400;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%; display:block}
+a{color:var(--navy); text-decoration:none}
+a:hover{text-decoration:underline; text-underline-offset:.18em}
+:focus-visible{outline:2.5px solid var(--navy); outline-offset:3px; border-radius:var(--radius)}
+
+.shell{width:var(--shell); margin-inline:auto}
+
+/* ---------- type primitives ---------- */
+.eyebrow{
+  font-family:var(--f-display); font-weight:600; font-size:.688rem;
+  letter-spacing:.16em; text-transform:uppercase; line-height:1.4;
+  color:var(--accent);
+}
+.dsp{font-family:var(--f-display); font-weight:700; letter-spacing:-.022em; line-height:1.02}
+h1,h2,h3,h4{font-family:var(--f-display); font-weight:700; letter-spacing:-.02em; margin:0}
+h2{font-size:clamp(1.95rem,3.4vw,3rem); line-height:1.06}
+h3{font-size:clamp(1.22rem,1.5vw,1.45rem); line-height:1.18; letter-spacing:-.012em}
+h4{font-size:1.02rem; line-height:1.3; letter-spacing:.005em}
+p{margin:0 0 1.05em}
+.lede{font-size:clamp(1.2rem,1.35vw + .8rem,1.6rem); line-height:1.5; font-weight:300; color:#3B352E}
+.small{font-family:var(--f-display); font-size:.76rem; line-height:1.5; color:var(--ink-2)}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ---------- photography ---------- */
+.photoslat{position:relative; overflow:hidden; background:#20242c}
+.photoslat > img{width:100%; height:100%; object-fit:cover; object-position:var(--pos,center)}
+
+.logo{
+  display:block; background-image:var(--logo); background-repeat:no-repeat;
+  background-size:contain; background-position:left center;
+  width:calc(var(--lh) * 6.06); height:var(--lh); --lh:22px;
+}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:fixed; inset:0 0 auto 0; z-index:60; height:62px;
+  display:flex; align-items:center;
+  background:rgba(246,246,244,.86);
+  backdrop-filter:saturate(180%) blur(14px); -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--rule-soft);
+  transform:translateY(-100%); transition:transform .45s var(--ease);
+}
+.topbar.is-shown{transform:none}
+.topbar .shell{display:flex; align-items:center; gap:1.5rem; width:var(--shell)}
+.topbar .logo{--lh:27px}
+.navlinks{display:flex; gap:clamp(1rem,1.55vw,2rem); margin-left:auto; align-items:center}
+.navlinks a{
+  font-family:var(--f-display); font-size:.72rem; font-weight:600; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-2); display:flex; gap:.4rem; align-items:baseline;
+}
+.navlinks a:hover{color:var(--ink); text-decoration:none}
+.navlinks a{position:relative; isolation:isolate; padding-block:.35rem; white-space:nowrap; transition:color .25s var(--ease)}
+.navlinks a::before{
+  content:""; position:absolute; inset:-.15rem -.55rem;
+  border-radius:var(--radius); background:var(--nc); opacity:0;
+  transition:opacity .3s var(--ease);
+  z-index:-1;
+}
+.navlinks a.is-current{color:var(--ink)}
+.navlinks a.is-current::before{opacity:.13}
+.navlinks a b{color:var(--nc); font-weight:700; font-size:.7rem}
+.navcta{
+  margin-left:clamp(1rem,2.2vw,2.4rem);
+  font-family:var(--f-display); font-size:.72rem; font-weight:600; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--paper); background:var(--green);
+  padding:.6rem .95rem; border-radius:var(--radius); white-space:nowrap;
+}
+.navcta:hover{background:#0B5E3E; text-decoration:none}
+.progress{position:absolute; left:0; bottom:-1px; height:2px; width:0; background:var(--accent); transition:width .12s linear}
+
+/* ---------- hero ---------- */
+.hero{position:relative; min-height:min(86svh,820px); display:flex; align-items:stretch}
+.hero .photoslat{position:absolute; inset:0}
+.hero-scrim{position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,16,30,.28), rgba(20,16,30,.05) 40%, rgba(20,16,30,.34))}
+.hero-inner{
+  position:relative; z-index:2; width:var(--shell); margin:auto; padding:86px 0 34px;
+  display:flex; align-items:center;
+}
+.hero-foot{
+  display:flex; align-items:center; justify-content:flex-start; gap:1.5rem;
+  margin-top:clamp(1.6rem,3vw,2.3rem);
+}
+.herocard{
+  background:rgba(246,246,244,.92);
+  align-self:center;
+  backdrop-filter:blur(3px) saturate(120%); -webkit-backdrop-filter:blur(3px) saturate(120%);
+  padding:clamp(1.8rem,3.4vw,3.2rem); max-width:min(745px,100%);
+  border-left:3px solid var(--rust);
+}
+.herocard .mark{background-image:var(--logo-stacked); width:calc(var(--lh) * 2.209)}
+/* Co-brand lockup, set as on the report cover: CCL mark, hairline,
+   "With support from:", Beyond mark, all on one line. */
+.cobrand{
+  display:flex; align-items:center; flex-wrap:wrap; gap:.9rem 1.1rem;
+  margin-bottom:clamp(1.6rem,3vw,2.4rem);
+}
+.cobrand .mark{flex:0 0 auto}
+.cobrand-rule{align-self:stretch; width:1px; background:var(--ink); opacity:.55}
+.cobrand-label{
+  font-family:var(--f-display); font-size:.8rem; font-weight:400; line-height:1.25;
+  color:var(--ink); margin:0; width:min-content;
+}
+.cobrand img{height:52px; width:auto}
+.herocard h1{
+  color:#8B5230; font-size:clamp(2.2rem,4.6vw,3.9rem); line-height:1; letter-spacing:-.028em; text-wrap:balance;
+  margin:0 0 1.3rem;
+}
+.herocard .rule{height:1px; background:var(--rule); margin:1.5rem 0 1.1rem}
+.hero-meta{display:flex; flex-wrap:wrap; gap:1rem 2rem; align-items:center}
+.hero-meta .eyebrow{color:var(--navy)}
+.hero-sub{font-size:clamp(1.05rem,1vw + .8rem,1.28rem); line-height:1.5; font-weight:300; color:#453E36; max-width:48ch; margin:0}
+.hero-actions{display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.8rem}
+.btn{
+  font-family:var(--f-display); font-size:.78rem; font-weight:600; letter-spacing:.09em;
+  text-transform:uppercase; padding:.85rem 1.35rem; border-radius:var(--radius); border:1px solid transparent;
+  transition:background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
+}
+.btn-solid{background:var(--green); color:var(--paper)}
+.btn[aria-disabled="true"], .navcta[aria-disabled="true"]{cursor:default}
+.btn-solid:hover{background:#0B5E3E; text-decoration:none}
+.btn-ghost{border-color:var(--rule); color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink); text-decoration:none}
+.scrollcue{
+  position:absolute; right:clamp(16px,4vw,52px); bottom:26px; z-index:3;
+  font-family:var(--f-display); font-size:.66rem; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(246,246,244,.8); display:flex; flex-direction:column; align-items:center; gap:.5rem;
+}
+.scrollcue span{display:block; width:1px; height:34px; background:linear-gradient(rgba(246,246,244,.85), rgba(246,246,244,0)); animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(.2); transform-origin:top}45%{transform:scaleY(1); transform-origin:top}46%{transform:scaleY(1); transform-origin:bottom}100%{transform:scaleY(0); transform-origin:bottom}}
+
+/* ---------- section openers ---------- */
+.chapter{scroll-margin-top:70px}
+.sechead{padding:clamp(3.2rem,6vw,5.4rem) 0 clamp(1.6rem,3vw,2.6rem)}
+.sechead-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.55fr); gap:clamp(2rem,5vw,5rem); align-items:start}
+.sechead .kicker{border-top:2px solid var(--ink); padding-top:1.4rem}
+.sechead h2{color:var(--accent); margin-bottom:1.4rem}
+.statrow{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(1rem,2.5vw,2.4rem); margin-top:clamp(2.4rem,4.5vw,3.4rem); border-top:1px solid var(--rule); padding-top:1.8rem}
+.stat .n{font-family:var(--f-display); font-weight:700; font-size:clamp(2.7rem,4.8vw,4.25rem); line-height:1; letter-spacing:-.03em; color:var(--accent); display:block}
+.stat p{font-size:clamp(1rem,.4vw + .9rem,1.12rem); line-height:1.4; color:var(--ink-2); margin:.8rem 0 0; font-family:var(--f-display); font-weight:500; max-width:26ch}
+
+/* ---------- body ---------- */
+.body{padding:clamp(1.6rem,3vw,2.6rem) 0 clamp(2.6rem,5vw,4.4rem)}
+.body .col{max-width:var(--measure)}
+.standfirst{font-size:clamp(1.15rem,1.2vw + .85rem,1.45rem); line-height:1.52; font-weight:300; color:#3B352E; max-width:56ch; margin-bottom:2rem}
+.body h3{margin:2.4rem 0 .7rem; color:var(--accent)}
+.body h3:first-child{margin-top:0}
+.tint{background:color-mix(in srgb, var(--accent) 6%, var(--paper))}
+
+/* Run-in lead-ins, as the report sets them: bold sans, navy, same line. */
+.runin{font-family:var(--f-display); font-weight:700; color:var(--navy); letter-spacing:-.003em; font-size:.94em}
+
+/* Footnote markers and endnotes (report p.86 styling) */
+sup.fn{font-size:.62em; line-height:0; vertical-align:super; margin-left:.05em}
+sup.fn a{font-family:var(--f-display); font-weight:600; color:var(--navy); padding:0 .08em}
+sup.fn a:hover{text-decoration:underline}
+.endnotes{max-width:none; margin:clamp(2.8rem,5vw,4rem) 0 0; padding-top:1.6rem; border-top:1px solid var(--rule)}
+.endnotes h3{margin:0 0 1rem; font-size:1.1rem; color:var(--accent)}
+.endnotes ol{counter-reset:en; list-style:none; margin:0; padding:0; font-family:var(--f-display); font-size:.8rem; line-height:1.6; color:var(--ink-2); columns:2 26rem; column-gap:clamp(2rem,4vw,3.5rem)}
+.endnotes li{counter-increment:en; position:relative; margin:0 0 .75rem; padding-left:2rem; break-inside:avoid; scroll-margin-top:90px}
+.endnotes li::before{content:counter(en); position:absolute; left:0; top:0; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums}
+.endnotes li:target{background:color-mix(in srgb, var(--navy) 9%, transparent)}
+.endnotes a{color:var(--navy); text-decoration:underline; text-underline-offset:.16em; overflow-wrap:anywhere}
+.endnotes a.fnback{text-decoration:none; margin-left:.2rem}
+sup.fn a{scroll-margin-top:120px}
+
+/* Pull quote in the right-hand column (report p.7) */
+.split{display:grid; grid-template-columns:minmax(0,var(--measure)) minmax(0,1fr); gap:clamp(2rem,5vw,5.5rem); align-items:end}
+.sidequote{padding-bottom:.4rem}
+.pull{
+  font-family:var(--f-text); font-style:italic; font-weight:400;
+  font-size:clamp(1.7rem,2.6vw,2.45rem); line-height:1.16; letter-spacing:-.01em;
+  color:var(--accent); margin:0; text-align:left; max-width:18ch;
+}
+
+/* Exhibit titles: caps, bold label, as in the report */
+.exhibit{
+  font-family:var(--f-display); font-weight:400; font-size:.8rem; line-height:1.4;
+  letter-spacing:.015em; text-transform:uppercase; color:var(--ink); margin:0;
+}
+.exhibit b{font-weight:700}
+
+/* Table E1, matched to report p.9 */
+.tablewrap{margin:clamp(2rem,4vw,3rem) 0 clamp(3rem,6vw,4.6rem)}
+.tablewrap .exhibit{margin-bottom:1rem}
+table.rpt{
+  width:100%; border-collapse:collapse; margin:0;
+  font-family:var(--f-display); font-size:.86rem; background:var(--panel);
+}
+table.rpt th{font-weight:700; text-align:left; vertical-align:bottom; font-size:.86rem; color:var(--ink); padding:1.4rem 1rem .8rem; border-bottom:1.5px solid var(--navy)}
+table.rpt td{padding:.85rem 1rem; border-bottom:1px solid color-mix(in srgb, var(--navy) 55%, transparent); vertical-align:middle; color:var(--ink); line-height:1.45}
+table.rpt th:first-child, table.rpt td:first-child{padding-left:1.25rem}
+table.rpt th:last-child, table.rpt td:last-child{padding-right:1.25rem}
+table.rpt tbody tr:last-child td{border-bottom:0; padding-bottom:1.4rem}
+.tnote{font-family:var(--f-display); font-size:.72rem; color:var(--ink-3); line-height:1.55; margin:0}
+.scrollx{overflow-x:auto; -webkit-overflow-scrolling:touch}
+
+.callout{
+  padding:clamp(1.5rem,3vw,2.6rem); margin:2.8rem 0; border-top:3px solid var(--accent);
+  background:color-mix(in srgb, var(--accent) 7%, var(--paper));
+}
+.callout h3{margin-top:0; color:var(--ink)}
+.callout p:last-child{margin-bottom:0}
+
+/* Levers: larger, and they enter one at a time */
+.levers{
+  list-style:none; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(1.2rem,3vw,2.6rem); margin:clamp(1.4rem,3vw,2.2rem) 0 clamp(2rem,4vw,2.8rem);
+}
+.levers li{border-top:3px solid var(--accent); padding-top:1.3rem}
+.levers .num{
+  font-family:var(--f-display); font-weight:700; font-size:.95rem; letter-spacing:.01em;
+  color:var(--accent); display:flex; align-items:center; gap:.55rem; margin-bottom:.6rem;
+}
+.levers .arr{width:22px; height:14px; color:currentColor; flex:0 0 auto}
+.levers h4{font-size:clamp(1.3rem,1.75vw,1.65rem); line-height:1.15; letter-spacing:-.015em; margin-bottom:.7rem}
+.levers p{font-size:1.06rem; line-height:1.55; color:var(--ink-2); margin:0}
+.js .levers li{opacity:0; transform:translateY(22px); transition:opacity .7s var(--ease), transform .7s var(--ease); transition-delay:calc(var(--i) * .28s)}
+.js .levers.is-in li{opacity:1; transform:none}
+
+/* ---------- scrollytelling chart blocks ----------
+   Two-column on desktop: step copy on the left, the chart card
+   pinned on the right. Below 900px the card pins under the top bar
+   and the step cards scroll up over it. Chart colors are the exact
+   values from the report's figure exports. */
+:root{
+  --c-ref:#004D85; --c-co2:#467ED1; --c-sp:#18B677;
+  --c-bc:#C16A3E; --c-fg:#004D85; --c-ch4:#18B677; --c-n2o:#467ED1; --c-o3:#B2D6CA;
+  --c-mute:#CFCAC2;
+}
+.scrolly{
+  display:grid; grid-template-columns:minmax(250px,.7fr) minmax(0,1.65fr);
+  gap:clamp(2rem,4.5vw,4.5rem); margin:clamp(2.6rem,5vw,4rem) 0;
+}
+.scrolly-graphic{grid-column:2; grid-row:1; margin:0; position:sticky; top:86px; align-self:start}
+/* Tall bottom padding keeps the chart pinned after the last step
+   triggers, so the final state can be read before the card releases. */
+.scrolly-steps{grid-column:1; grid-row:1; padding:40vh 0 68vh}
+
+.chartcard{
+  background:var(--paper); border:1px solid var(--rule-soft);
+  display:flex; flex-direction:column; padding:clamp(1.2rem,2.2vw,1.9rem);
+  box-shadow:0 1px 0 rgba(46,40,34,.04), 0 18px 40px -34px rgba(46,40,34,.5);
+  height:min(calc(100svh - 118px), 700px); min-height:460px;
+}
+.chart-head{border-bottom:1px solid var(--rule-soft); padding-bottom:.9rem; margin-bottom:.4rem}
+.chart-body{position:relative; flex:1 1 auto; min-height:0; margin:.9rem 0 .7rem}
+.chart-body svg{position:absolute; inset:0; width:100%; height:100%; overflow:visible; display:block}
+.chart-foot{border-top:1px solid var(--rule-soft); padding-top:.75rem; font-family:var(--f-display); font-size:.7rem; line-height:1.5; color:var(--ink-3); margin:0}
+.chart-nojs{font-family:var(--f-display); font-size:.85rem; color:var(--ink-2); margin:1rem 0}
+
+/* key: items light up as their series enters the chart */
+.chart-key{list-style:none; margin:.85rem 0 0; padding:0; display:flex; flex-wrap:wrap; gap:.35rem 1.1rem}
+.chart-key li{
+  font-family:var(--f-display); font-size:.74rem; font-weight:500; line-height:1.3; color:var(--ink-2);
+  display:flex; align-items:center; gap:.45rem; opacity:.28; transition:opacity .45s var(--ease);
+}
+.chart-key li.is-on{opacity:1}
+.sw{display:inline-block; flex:0 0 auto; width:22px; height:0; border-top:2px dashed var(--c)}
+.sw.solid{border-top:3px solid var(--c)}
+.sw.box{width:11px; height:11px; border:0; background:var(--c)}
+
+/* step cards */
+.step{
+  position:relative; padding:0 0 0 1.25rem; margin:0 0 56vh;
+  border-left:2px solid var(--rule); opacity:.36;
+  transition:opacity .45s var(--ease), border-color .45s var(--ease);
+}
+.step:last-child{margin-bottom:0}
+.step.is-active{opacity:1; border-left-color:var(--accent)}
+.step p{font-size:1.02rem; line-height:1.62; margin:0}
+.step .step-key{
+  font-family:var(--f-display); font-weight:700; font-size:.95rem; line-height:1.3;
+  letter-spacing:-.005em; color:var(--ink); margin:0 0 .55rem;
+  display:flex; align-items:center; gap:.6rem;
+}
+
+/* chart internals (SVG) */
+.chart-body text{font-family:var(--f-display); fill:var(--ink-3); font-size:12px; font-variant-numeric:tabular-nums}
+.chart-body .grid line{stroke:var(--rule-soft); stroke-width:1}
+.chart-body .grid line.base{stroke:var(--rule)}
+.chart-body .series{transition:opacity .5s var(--ease)}
+.chart-body .anno{transition:opacity .45s var(--ease)}
+.chart-body .anno text{fill:var(--ink); font-weight:600}
+.chart-body .anno .halo{paint-order:stroke; stroke:var(--paper); stroke-width:4px; stroke-linejoin:round}
+.chart-body .bar{transform-box:fill-box; transform-origin:50% 100%; transition:transform .9s var(--ease), opacity .45s var(--ease)}
+.chart-body .seg{transition:fill .55s var(--ease)}
+.chart-body .total{fill:var(--ink); font-weight:600}
+.chart-body text.axt{font-size:10px; font-weight:600; letter-spacing:.05em; fill:var(--ink-3)}
+
+@media (max-width:900px){
+  .scrolly{display:block; position:relative}
+  .scrolly-graphic{position:sticky; top:66px; z-index:1}
+  .chartcard{height:min(56svh,520px); min-height:340px; padding:1rem 1rem .9rem}
+  .chart-head .exhibit{font-size:.6rem; line-height:1.38}
+  .chart-key{margin-top:.6rem; gap:.25rem .8rem}
+  .chart-key li{font-size:.66rem}
+  .chart-foot{font-size:.62rem; padding-top:.5rem}
+  .scrolly-steps{position:relative; z-index:2; padding:30vh 0 45vh; pointer-events:none}
+  .step{
+    pointer-events:auto; margin:0 0 70vh; opacity:1;
+    background:var(--paper); border:1px solid var(--rule-soft); border-left:3px solid var(--rule);
+    padding:1.1rem 1.2rem; box-shadow:0 16px 36px -22px rgba(46,40,34,.45);
+  }
+}
+@media print{
+  .scrolly{display:block}
+  .scrolly-graphic{position:static}
+  .scrolly-steps{padding:1rem 0}
+  .step{margin:0 0 1rem; opacity:1}
+}
+
+/* ---------- mitigation-measures embed slot ---------- */
+/* ---------- mitigation-measures catalogue ---------- */
+#measures .exhibit{margin:0 0 1rem}
+.embed{border:1px solid var(--rule); background:var(--paper); margin:0 0 clamp(2.8rem,5vw,4rem)}
+.embed-frame{position:relative; width:100%; height:clamp(533px,72vh,780px)}
+.embed-frame iframe{position:absolute; inset:0; width:100%; height:100%; border:0; display:block; background:transparent}
+.deftable + .deftable{margin-top:clamp(2.8rem,5vw,4rem)}
+table.defs th{width:15rem; vertical-align:top; font-weight:700; padding:.95rem 1rem .95rem 1.25rem; border-bottom:1px solid color-mix(in srgb, var(--navy) 55%, transparent)}
+table.defs td{vertical-align:top}
+table.defs tr:first-child th, table.defs tr:first-child td{padding-top:1.3rem}
+table.defs tbody tr:last-child th{border-bottom:0; padding-bottom:1.4rem}
+table.maturity{min-width:880px}
+table.maturity thead th{width:auto}
+table.maturity thead th:nth-child(1){width:13%}
+table.maturity thead th:nth-child(2){width:30%}
+table.maturity thead th:nth-child(3){width:26%}
+table.maturity tbody th{vertical-align:top; text-align:left; font-weight:700; padding:1rem 1rem 1rem 1.25rem; border-bottom:1px solid color-mix(in srgb, var(--navy) 55%, transparent)}
+table.maturity tbody tr:last-child th{border-bottom:0; padding-bottom:1.4rem}
+table.maturity td{vertical-align:top}
+table.maturity .lvl{display:block; font-size:1.6rem; line-height:1; letter-spacing:-.02em; color:var(--accent); margin-bottom:.35rem}
+table.maturity ul{margin:0; padding:0 0 0 1rem}
+table.maturity li{margin:0 0 .3rem}
+table.maturity li:last-child{margin-bottom:0}
+
+table.defs th, table.defs td{padding-top:1rem; padding-bottom:1rem; line-height:1.45}
+table.maturity tbody th, table.maturity td{padding-top:1rem; padding-bottom:1rem}
+@media (max-width:720px){
+  .tint table.rpt.defs td, .tint table.rpt.maturity tr{border-bottom-color:color-mix(in srgb, var(--accent) 32%, transparent)}
+  table.defs, table.defs tbody, table.defs tr, table.defs th, table.defs td{display:block; width:auto}
+  table.defs th{border-bottom:0; padding:1rem 1.1rem .2rem}
+  table.defs td{padding:0 1.1rem 1rem; border-bottom:1px solid color-mix(in srgb, var(--navy) 55%, transparent)}
+  table.defs tr:first-child th{padding-top:1.2rem}
+  table.defs tr:first-child td{padding-top:0}
+  table.defs tbody tr:last-child td{border-bottom:0}
+  table.maturity{min-width:0}
+  table.maturity thead{display:none}
+  table.maturity, table.maturity tbody, table.maturity tr, table.maturity th, table.maturity td{display:block; width:auto}
+  table.maturity tr{padding:1.1rem 1.1rem 1rem; border-bottom:1px solid color-mix(in srgb, var(--navy) 55%, transparent)}
+  table.maturity tbody tr:last-child{border-bottom:0}
+  table.maturity tbody th, table.maturity td, table.maturity tbody tr:last-child th{padding:0; border:0}
+  table.maturity tbody th{margin-bottom:.7rem}
+  table.maturity td + td, table.maturity th + td{margin-top:.75rem}
+  table.maturity td::before{content:attr(data-label); display:block; font-weight:700; font-size:.74rem; color:var(--ink-2); margin-bottom:.25rem}
+  table.maturity .lvl{display:inline; font-size:1.3rem; margin:0 .5rem 0 0}
+  table.rpt.defs th:first-child, table.rpt.defs td:last-child{padding-left:1.1rem; padding-right:1.1rem}
+  table.rpt.maturity tbody th:first-child, table.rpt.maturity td:last-child{padding-left:0; padding-right:0}
+}
+
+
+/* Executive Summary opener: the report's p.5 photograph fills the
+   column under the heading and stretches to the height of the text. */
+.sechead-grid.es-open{align-items:stretch}
+.es-open .kicker{display:flex; flex-direction:column}
+.es-photo{margin:clamp(1.6rem,3vw,2.2rem) 0 0; flex:1 1 auto; min-height:240px; position:relative; overflow:hidden; background:#20242c}
+.es-photo img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 62%}
+
+/* Tables on a tinted section take the section's own hue instead of the
+   report's blue-grey panel: a paper ground one step lighter than the
+   tint, with rules in the section accent. */
+.tint table.rpt{background:var(--paper)}
+.tint table.rpt thead th{border-bottom-color:var(--accent)}
+.tint table.rpt td, .tint table.rpt tbody th{border-bottom-color:color-mix(in srgb, var(--accent) 32%, transparent)}
+
+/* Table of Contents intro sits on the same two-column grid as the
+   contents below, so its text starts on the 05 column edge. */
+.sechead-grid.toc-align{grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(2rem,5vw,5rem) clamp(2.4rem,6vw,6rem)}
+
+/* Catalogue contributors in Acknowledgments */
+.contributors{list-style:none; margin:.2rem 0 0; padding:0}
+.contributors li{padding:.38rem 0 .38rem 1.1rem; position:relative; font-size:1rem; line-height:1.45}
+.contributors li::before{content:""; position:absolute; left:0; top:.95em; width:5px; height:5px; border-radius:50%; background:var(--ink)}
+.contributors em{color:var(--ink-2)}
+
+/* ---------- table of contents (report p.3) ---------- */
+.tocgrid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:0 clamp(2.4rem,6vw,6rem); align-items:start}
+.toccol, .tocfront, .tocsub{list-style:none; margin:0; padding:0}
+.toccol > li{display:grid; grid-template-columns:4.6rem minmax(0,1fr); gap:0 clamp(.8rem,1.6vw,1.4rem); padding:1.5rem 0; border-bottom:1px solid color-mix(in srgb, var(--navy) 45%, transparent)}
+.toccol > li:first-child{padding-top:0}
+.toccol > li.tocback > .tocfront{grid-column:2}
+.toccol > li:last-child{border-bottom:0}
+.tocch .num{
+  font-family:var(--f-display); font-weight:700; font-size:clamp(2.6rem,4vw,3.4rem);
+  line-height:.8; letter-spacing:-.04em; color:var(--accent);
+}
+.tocrow{display:flex; align-items:baseline; justify-content:space-between; gap:1.2rem; padding:.28rem 0}
+.tocrow .pg{flex:0 0 auto; font-variant-numeric:tabular-nums; text-align:right}
+.tocrow.head .t, .tocrow.head .pg{
+  font-family:var(--f-display); font-weight:700; font-size:clamp(.98rem,1.15vw,1.12rem);
+  text-transform:uppercase; letter-spacing:.01em; line-height:1.2; color:var(--ink);
+}
+.tocfront .tocrow.head{padding:.2rem 0}
+.tocrow .hl{color:var(--accent)}
+.tocch .tocrow.head{padding:0 0 .6rem}
+.tocsub .tocrow .t, .tocsub .tocrow .pg{font-family:var(--f-text); font-style:italic; font-size:1.02rem; line-height:1.35; color:var(--ink)}
+.tocsub .tocrow{padding:.32rem 0}
+.tocrow.app{padding-top:.75rem}
+.tocrow.app .sub{display:block; text-transform:none; font-weight:400; font-size:.9rem; letter-spacing:0; line-height:1.3; margin-top:.2rem; color:var(--ink)}
+.tocsub.indent{margin:.4rem 0 .3rem 1.6rem}
+.tocfront > li + li .tocrow.app{margin-top:.2rem}
+
+/* ---------- acknowledgments (report p.2) ---------- */
+.ackgrid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(2rem,5vw,4.5rem); align-items:start}
+.ackblock + .ackblock{margin-top:clamp(1.8rem,3.4vw,2.6rem); padding-top:clamp(1.8rem,3.4vw,2.6rem); border-top:1px solid color-mix(in srgb, var(--navy) 45%, transparent)}
+.ackblock h3{font-family:var(--f-display); font-size:1rem; font-weight:700; letter-spacing:0; color:var(--navy); margin:0 0 .9rem}
+.ackblock p{font-size:1rem; line-height:1.62; margin-bottom:.9rem}
+.ackblock p:last-child{margin-bottom:0}
+.ackblock strong{font-weight:700; color:var(--ink)}
+.ackblock a{overflow-wrap:anywhere}
+.ackblock strong.leff{font-family:var(--f-display); color:var(--navy); letter-spacing:.02em}
+.council{list-style:none; margin:1.1rem 0 0; padding:0}
+.council li{padding:.38rem 0 .38rem 1.1rem; position:relative; font-size:1rem; line-height:1.45}
+.council li::before{content:""; position:absolute; left:0; top:.95em; width:5px; height:5px; border-radius:50%; background:var(--ink)}
+.council em{color:var(--ink-2)}
+
+/* ---------- colophon + footer ---------- */
+.colophon{position:relative; min-height:min(44svh,420px); display:flex; align-items:center; padding:clamp(2.4rem,4.5vw,3.6rem) 0}
+.colophon .photoslat{position:absolute; inset:0}
+.colophon .inner{position:relative; z-index:2; width:var(--shell); margin-inline:auto; display:flex; justify-content:flex-end}
+.colocard{background:rgba(246,246,244,.94); padding:clamp(1.6rem,3vw,2.4rem); max-width:min(660px,100%)}
+.colocard p{font-size:.94rem; line-height:1.55; margin-bottom:.8rem}
+.colocard .note{font-family:var(--f-text); font-style:italic; font-weight:300; color:var(--ink-2); font-size:.92rem; max-width:56ch}
+.colocard .logo{--lh:22px; margin-top:1.3rem}
+
+footer.site{border-top:1px solid var(--rule); padding:1.5rem 0 2rem}
+footer.site .shell{display:flex; flex-wrap:wrap; gap:1.2rem 2rem; align-items:center; justify-content:space-between}
+footer.site p, footer.site a{margin:0; line-height:1.5; display:flex; align-items:center}
+footer.site .logo{--lh:19px}
+footer.site .small{color:var(--ink-3)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .sechead-grid{grid-template-columns:1fr; gap:1.6rem}
+  .es-photo{flex:none; min-height:0; aspect-ratio:16/9}
+  .ackgrid{grid-template-columns:1fr; gap:2.4rem}
+  .tocgrid{grid-template-columns:1fr}
+  .toccol:first-child > li:last-child{border-bottom:1px solid color-mix(in srgb, var(--navy) 45%, transparent)}
+  .split{grid-template-columns:1fr; gap:1rem; align-items:start}
+  .sidequote{padding:.4rem 0 1.4rem}
+  .hero-inner{align-items:center}
+  .colophon .inner{justify-content:flex-start}
+}
+@media (max-width:900px){
+  .scrollcue{display:none}
+}
+@media (max-width:1180px){
+  .navlinks a span.lbl{display:none}
+}
+@media (max-width:720px){
+  .hero-foot{flex-direction:column; align-items:stretch; gap:.9rem}
+  .hero-foot .btn{text-align:center}
+  .navlinks{display:none}
+  .statrow{grid-template-columns:1fr; gap:1.5rem}
+  .hero-inner{padding-top:82px}
+  .herocard{border-left-width:2px}
+  .toccol > li{grid-template-columns:3.3rem minmax(0,1fr)}
+  .tocch .num{font-size:2.3rem}
+  .levers{grid-template-columns:1fr; gap:1.8rem}
+  .endnotes ol{columns:1}
+  .cobrand img{height:44px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important}
+}
+@media print{
+  .topbar,.scrollcue{display:none}
+}
