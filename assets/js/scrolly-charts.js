@@ -41,7 +41,18 @@
   }
   function txt(parent, x, y, str, attrs){
     var a = attrs || {}; a.x = x; a.y = y;
-    var t = svgEl("text", a, parent); t.textContent = str; return t;
+    var t = svgEl("text", a, parent);
+    /* Draw a subscript 2 as a shifted tspan instead of the Unicode
+       character, which not every chart font weight carries. */
+    var parts = String(str).split("\u2082");
+    if(parts.length === 1){ t.textContent = str; return t; }
+    parts.forEach(function(p, i){
+      if(i > 0){
+        var s = svgEl("tspan", {dy:"0.3em", "font-size":"0.7em"}, t); s.textContent = "2";
+        var r = svgEl("tspan", {dy:"-0.3em"}, t); r.textContent = p;
+      } else if(p){ t.appendChild(document.createTextNode(p)); }
+    });
+    return t;
   }
   /* Axis titles as set in the report: caps, gray. Rotated on wide
      charts; run along the top on narrow ones where height is short. */

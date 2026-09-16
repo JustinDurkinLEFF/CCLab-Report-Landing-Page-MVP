@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Superpollutant Mitigation Measures Catalogue — Carbon Containment Lab</title>
+<meta name="description" content="Explore more than 200 ways to cut methane, HFCs, black carbon, N₂O, and tropospheric ozone, organized by gas, source type, carbon market status, and maturity. From the Carbon Containment Lab&rsquo;s Superpollutant Roadmap for Corporate Action.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     MITIGATION MEASURES CATALOGUE — /mitigationmeasures
+     Served from mitigationmeasures/index.html. Asset paths are
+     relative (../assets/...) so the page works on Netlify, under
+     python3 -m http.server, and in the Statamic handoff.
+     Copy from CCL's notes: page intro, Airtable embed, then the
+     field and maturity-level definitions below the table.
+     ============================================================ -->
+
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+
+<body class="subpage">
+
+<!-- Same bar as the landing page, pinned open (data-pinned). Section
+     links return to the landing page; 02 marks this page as current. -->
+<header class="topbar is-shown" id="topbar" data-pinned>
+  <div class="shell">
+    <a href="../index.html" aria-label="Carbon Containment Lab — Superpollutant Roadmap home"><span class="logo" role="img" aria-label="Carbon Containment Lab"></span></a>
+    <nav class="navlinks" aria-label="Site sections">
+      <a href="../index.html#summary" style="--nc:var(--green)"><b>01</b> <span class="lbl">Executive summary</span></a>
+      <a href="./" class="is-current" aria-current="page" style="--nc:var(--rust)"><b>02</b> <span class="lbl">Mitigation measures</span></a>
+      <a href="../index.html#contents" style="--nc:var(--navy)"><b>03</b> <span class="lbl">Contents</span></a>
+      <a href="../index.html#acknowledgments" style="--nc:var(--umber)"><b>04</b> <span class="lbl">Acknowledgments</span></a>
+    </nav>
+    <a class="navcta" href="https://carboncontainmentlab.org/PDF" target="_blank" rel="noopener">Download the PDF</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main id="top">
+
+<section class="chapter tint" id="catalogue" style="--accent:var(--rust)">
+  <div class="sechead shell">
+    <div class="sechead-grid">
+      <div class="kicker">
+        <h1>Mitigation<br>Measures</h1>
+        <p class="small">200+ measures &middot; Appendix B</p>
+        <p class="small backlink"><a href="../index.html#measures">&larr; Superpollutant Roadmap</a></p>
+      </div>
+      <div>
+        <p class="lede">The Superpollutant Mitigation Measures Catalogue: 200+ ways to cut methane, HFCs, black carbon, N<sub class="chem">2</sub>O, and tropospheric ozone.</p>
+        <p>The Superpollutant Mitigation Measures Catalogue is intended to make it easier for companies, investors, and policymakers to see not just what can be done, but how to act on it. You can filter and sort using the icons at the top of the table. Definitions for each field are below the table; and more information about how this was developed can be found in Appendix B of the Roadmap (<a href="https://carboncontainmentlab.org/PDF" target="_blank" rel="noopener">download here</a>).</p>
+        <p>The CC Lab intends to continuously expand, refine, and update this database, adding examples and providing even more information on each.</p>
+        <p>We look forward to learning about and featuring additional measures and data. As you explore the data, let us know if you have measures, sources, updates, or examples to add, contact us at: <a href="mailto:superpollutants@cclab.org">superpollutants@cclab.org</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="body shell" style="padding-top:0">
+    <p class="exhibit" id="catalogue-title"><b>Superpollutant Mitigation Measures Catalogue</b></p>
+    <div class="embed">
+      <div class="embed-frame">
+        <iframe class="airtable-embed"
+          src="https://airtable.com/embed/appDRXqC3gHRr0Tt7/shr7pL8QE6KIpwSjK?viewControls=on"
+          title="Superpollutant Mitigation Measures Catalogue (Airtable)"
+          aria-labelledby="catalogue-title"
+          frameborder="0"
+          width="100%" height="533"></iframe>
+      </div>
+    </div>
+
+    <div class="deftable">
+      <p class="exhibit" id="fields-title"><b>Field Definitions</b></p>
+      <div class="scrollx">
+        <table class="rpt defs" aria-labelledby="fields-title">
+          <tbody>
+            <tr><th scope="row">Mitigation Measure</th><td>A physical measure taken to mitigate superpollutants (not a financing, policy, or enabling mechanism).</td></tr>
+            <tr><th scope="row">Source Type</th><td>A classification of the main sources of superpollutants to align with the IPCC Guidelines for National Greenhouse Gas Inventories. In some cases these are tailored to describe the sub-sector most closely tied to the mitigation measure.</td></tr>
+            <tr><th scope="row">Primary Superpollutant</th><td>The primary gas being mitigated through the measure</td></tr>
+            <tr><th scope="row">Other Superpollutants Addressed</th><td>Other superpollutants mitigated through the measure in addition to the primary superpollutant</td></tr>
+            <tr><th scope="row">Maturity Level</th><td>A value between one and six indicating how developed, reliable, and ready a technology or process is for widespread use. Each level is further defined below.</td></tr>
+            <tr><th scope="row">Voluntary Carbon Markets Status</th><td>Availability of methodologies in the Voluntary Carbon Market which incentivise this measure. Active indicates one or more active methodologies; Inactive indicates methodologies that have been retired or invalidated; In development indicates methodologies in progress; Not Available indicates a lack of all of the above.</td></tr>
+            <tr><th scope="row">Value Chain Market Mechanism</th><td>This column shows which market-based value chain actions might be appropriate for the measure, including: a standard existing for an EAC or book-and-claim system; a standard is in development; the activity is well suited to supplier engagement; or the activity is unlikely to be suited to these mechanisms.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="deftable">
+      <p class="exhibit" id="maturity-title"><b>Maturity Level Definitions</b></p>
+      <div class="scrollx">
+        <table class="rpt maturity" aria-labelledby="maturity-title">
+          <thead>
+            <tr>
+              <th scope="col">Maturity Level</th>
+              <th scope="col">Activities at this Maturity Level</th>
+              <th scope="col">Mechanism of Corporate Action</th>
+              <th scope="col">Example Strategic Corporate Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span class="lvl">1</span>Concept &amp; Research</th>
+              <td data-label="Activities at this Maturity Level">Laboratory-scale testing, academic research, and theoretical modeling. Low Technology Readiness Level (TRL 1&ndash;3); high financial and technical risk.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>R&amp;D Funding (internal)</li><li>Sponsored Research (external)</li><li>Sponsor Innovation Prizes</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Fund university labs or early-stage accelerators directly to prove basic chemistry and unlock the intellectual property needed for new tech.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="lvl">2</span>Proof of Concept</th>
+              <td data-label="Activities at this Maturity Level">Small pilot plants, prototype modeling, and life-cycle assessment (LCA) projections. Medium-low readiness (TRL 4&ndash;6); economic viability unproven.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>Corporate Venture Capital (CVC) investment</li><li>Host-Site Provision</li><li>Sponsor Innovation Prizes</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Invest seed equity through CVC arms to build early prototype hardware. Provide an active physical corporate asset to host the first field pilot.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="lvl">3</span>Demonstration &amp; Early Deployment</th>
+              <td data-label="Activities at this Maturity Level">First-of-a-kind commercial projects, early regulatory approvals, and niche adoption. Medium-high readiness (TRL 7&ndash;8); relies on subsidies, grants, or early adopters.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>Project Equity Investments</li><li>VCM Forward Offtake Agreements</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Invest direct equity into first-of-a-kind (FOAK) infrastructure facilities. Back this with a VCM Forward Offtake contract to guarantee an anchor customer.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="lvl">4</span>Early Adoption &amp; Capital Chasm</th>
+              <td data-label="Activities at this Maturity Level">Early-stage commercial rollout, limited to a few pioneering projects globally; focus on reducing high initial capital expenditures. TRL 8&ndash;9. Chasm because standard commercial banks view it as too risky, requiring specialized infrastructure funds, private equity, or loan guarantees.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>Project Equity Investments</li><li>VCM Forward Offtake Agreements</li><li>Market-Based Instruments (Book &amp; Claim / EACs)</li><li>VCM Spot Market Credit Purchases</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Purchase issued spot market credits from already-established projects to offset immediate corporate footprint gaps while long-term infrastructure scales up.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="lvl">5</span>Scaling/ Commercialization</th>
+              <td data-label="Activities at this Maturity Level">Mass manufacturing, standardized supply chains, declining unit costs, and policy backing. Mature (TRL 9); Some standard commercial financing available.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>VCM Spot Market Credit Purchases</li><li>Supplier Engagement Programs</li><li>Standards Writing/Engagement</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Use procurement mandates and low-interest supply-chain financing to force smaller tier-1 and tier-2 partners to adopt mature, off-the-shelf upgrades.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="lvl">6</span>Optimization &amp; System Integration</th>
+              <td data-label="Activities at this Maturity Level">Continuous technological refinement, circular-economy recycling of materials, and fully integrated grid/infrastructure support.</td>
+              <td data-label="Mechanism of Corporate Action"><ul><li>Supplier Engagement Programs (global)</li><li>Standards Writing/Engagement (global)</li><li>Policy Advocacy &amp; Regulatory Support</li></ul></td>
+              <td data-label="Example Strategic Corporate Action">Lobby for codes, mandates, and bans/standards to turn proven Level 5 solutions into mandatory, industry-wide legal requirements.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COLOPHON / DOWNLOAD ============ -->
+<section class="colophon" id="download">
+  <div class="photoslat" style="--pos:center 55%">
+    <img src="../assets/img/colophon-open-pit-mine.jpg" alt="Terraced walls of an open-pit mine at dusk" loading="lazy">
+  </div>
+  <div class="inner">
+    <div class="colocard">
+      <p class="eyebrow" style="--accent:var(--navy)">The full report</p>
+      <p>&copy; 2026 Carbon Containment Lab<br>Superpollutant Roadmap for Corporate Action<br>September 2026</p>
+      <p><a class="btn btn-solid" href="https://carboncontainmentlab.org/PDF" target="_blank" rel="noopener">Download the report</a></p>
+      <span class="logo" role="img" aria-label="Carbon Containment Lab"></span>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="shell">
+    <span class="logo" role="img" aria-label="Carbon Containment Lab"></span>
+    <p class="small">&copy; 2026 Carbon Containment Lab &middot; Superpollutant Roadmap for Corporate Action &middot; September 2026</p>
+    <a class="small" href="#top">Back to top &uarr;</a>
+  </div>
+</footer>
+</main>
+
+<script src="../assets/js/nav.js"></script>
+
+</body>
+</html>

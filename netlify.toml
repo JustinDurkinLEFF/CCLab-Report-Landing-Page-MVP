@@ -19,6 +19,18 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# Catalogue page (mitigationmeasures/index.html), with and without the
+# trailing slash.
+[[headers]]
+  for = "/mitigationmeasures"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/mitigationmeasures/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
 # CSS, JS and images can be cached, but only for an hour. File names are
 # not fingerprinted, so a long cache would hold stale assets after a push.
 [[headers]]

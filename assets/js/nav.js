@@ -2,6 +2,7 @@
   "use strict";
 
   /* Sticky bar, scroll progress, section accent, current-section state.
+     Shared by the landing page and /mitigationmeasures.
      The scrollytelling charts live in scrolly-charts.js and the lever
      reveal in levers-reveal.js. */
   var bar = document.getElementById("topbar");
@@ -11,11 +12,13 @@
   Array.prototype.forEach.call(document.querySelectorAll(".navlinks a[href^='#']"), function(a){
     navById[a.getAttribute("href").slice(1)] = a;
   });
+  /* Pages without a hero (e.g. /mitigationmeasures) keep the bar open. */
+  var pinned = bar.hasAttribute("data-pinned");
   var ticking = false;
 
   function onScroll(){
     var y = window.scrollY || window.pageYOffset;
-    bar.classList.toggle("is-shown", y > window.innerHeight * 0.72);
+    bar.classList.toggle("is-shown", pinned || y > window.innerHeight * 0.72);
     var doc = document.documentElement.scrollHeight - window.innerHeight;
     prog.style.width = (doc > 0 ? Math.min(100, (y / doc) * 100) : 0) + "%";
 

@@ -7,7 +7,7 @@
 <meta name="description" content="Superpollutants are responsible for roughly half of today's gross warming, yet they remain almost entirely absent from corporate climate targets. Read the executive summary and download the full Carbon Containment Lab roadmap.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
 
 <!-- ============================================================
      PHASE 1 — MVP LANDING PAGE
@@ -15,12 +15,15 @@
        1. Executive Summary (in full)
        2. Table of Contents
        3. Acknowledgments
-     plus the PDF download and a slot for the mitigation-measures embed.
+     plus the PDF download and a short Mitigation Measures section that
+     links out to the catalogue page at /mitigationmeasures
+     (mitigationmeasures/index.html).
 
      PHASE 2 (post Climate Week) drops in behind the SAME nav and the
      SAME URL structure — nothing here gets renamed or rebuilt:
        #summary       stays as the landing summary
-       #measures      the iframe slot below goes live (link pending)
+       #measures      stays as the catalogue intro; the Airtable embed
+                      and field definitions live on /mitigationmeasures
        #contents      each TOC row gains an href to its chapter page
        #acknowledgments stays
        + chapter pages, case studies, and the 200-row database attach
@@ -91,24 +94,24 @@
       </div>
       <div>
         <p class="lede">Superpollutants&mdash;methane, fluorinated gases (F-gases), nitrous oxide, tropospheric ozone, and black carbon&mdash;are responsible for roughly half of today&rsquo;s gross warming,<sup class="fn"><a href="#fn1" id="fnref1" aria-label="Endnote 1">1</a></sup> and cutting them is the fastest and lowest-cost way to slow warming this coming decade.</p>
-        <p><strong class="runin">Superpollutant mitigation is no longer optional, but necessary.</strong> The IPCC&rsquo;s 2&deg;C scenario assumes global superpollutant emissions fall by nearly 50 percent by 2050, representing about 142 Gt CO&#8322;e in cumulative avoided emissions, yet current trajectories keep these emissions essentially flat. That gap&mdash;between what targets call for and what is actually happening&mdash;is the opportunity. Closing it is the focus of this roadmap.</p>
+        <p><strong class="runin">Superpollutant mitigation is no longer optional, but necessary.</strong> The IPCC&rsquo;s 2&deg;C scenario assumes global superpollutant emissions fall by nearly 50 percent by 2050, representing about 142 Gt CO<sub class="chem">2</sub>e in cumulative avoided emissions, yet current trajectories keep these emissions essentially flat. That gap&mdash;between what targets call for and what is actually happening&mdash;is the opportunity. Closing it is the focus of this roadmap.</p>
         <p><strong class="runin">Corporations are positioned to close this gap as few other actors can.</strong> They are the largest source of catalytic private climate finance, hold procurement leverage over the supply chains where many of these emissions concentrate, and can make superpollutant action a market expectation rather than an exception or a coming policy driver.</p>
       </div>
     </div>
 
     <div class="statrow">
       <div class="stat" style="--accent:var(--green)"><span class="n tnum">~50%</span><p>Of today&rsquo;s gross warming comes from superpollutants</p></div>
-      <div class="stat" style="--accent:var(--rust)"><span class="n tnum">142 Gt</span><p>CO&#8322;e of cumulative avoided emissions in the 2&deg;C scenario</p></div>
-      <div class="stat" style="--accent:var(--navy)"><span class="n tnum">204</span><p>Mitigation measures cataloged, 60% mature and ready to scale</p></div>
+      <div class="stat" style="--accent:var(--rust)"><span class="n tnum">142 Gt</span><p>CO<sub class="chem">2</sub>e of cumulative avoided emissions in the 2&deg;C scenario</p></div>
+      <a class="stat" href="mitigationmeasures/" style="--accent:var(--navy)"><span class="n tnum">204</span><p>Mitigation measures cataloged, 60% mature and ready to scale</p></a>
     </div>
   </div>
 
   <div class="body shell">
     <div class="col">
-      <p><strong class="runin">Superpollutant action can help stabilize the climate and avoid tipping points.</strong> Superpollutants are on par with carbon dioxide in that both are responsible for a nearly equal share of the warming reduction required to hold the planet below 2&deg;C. Figure E1 presents projected global temperature outcomes through 2100 under the IPCC&rsquo;s 2&deg;C scenario. It compares the contribution of CO&#8322; mitigation alone versus combined CO&#8322; and superpollutant mitigation. Of the 0.9&deg;C of warming separating the 2&deg;C scenario from the business-as-usual case (reference case), approximately half is attributable to CO&#8322; reductions, with the remaining half attributable to superpollutant reductions.</p>
+      <p><strong class="runin">Superpollutant action can help stabilize the climate and avoid tipping points.</strong> Superpollutants are on par with carbon dioxide in that both are responsible for a nearly equal share of the warming reduction required to hold the planet below 2&deg;C. Figure E1 presents projected global temperature outcomes through 2100 under the IPCC&rsquo;s 2&deg;C scenario. It compares the contribution of CO<sub class="chem">2</sub> mitigation alone versus combined CO<sub class="chem">2</sub> and superpollutant mitigation. Of the 0.9&deg;C of warming separating the 2&deg;C scenario from the business-as-usual case (reference case), approximately half is attributable to CO<sub class="chem">2</sub> reductions, with the remaining half attributable to superpollutant reductions.</p>
       <p>Cutting superpollutant emissions delivers rapid, near-term relief because most are short-lived in the atmosphere. A single ton of methane abated today has largely left the climate system within two decades&mdash;making it a uniquely fast acting lever.</p>
-      <p><strong class="runin">Superpollutant action is a kickstart, not a substitute.</strong> Superpollutant action is an important complement to CO&#8322; action that is essential for limiting the extent of warming. Burning fossil fuel emits reflective sulfate particles that act to cool the planet. The reduction in reflective particles resulting from lower fossil fuel use, an effect known as &ldquo;unmasking,&rdquo; is the reason the &ldquo;CO&#8322; only&rdquo; curve in Figure E1 stays above the black line until 2060. Pairing superpollutant mitigation with decarbonization dampens this effect because most measures reduce warming without removing aerosol cooling.</p>
-      <p>This pairing creates an important sequencing opportunity. Rapid superpollutant abatement, achievable in low-cost, quick-turnaround interventions like leak repair and refrigerant management, will extend the scaling time needed for slower, capital-intensive CO&#8322; reductions in heavy industry and infrastructure.</p>
+      <p><strong class="runin">Superpollutant action is a kickstart, not a substitute.</strong> Superpollutant action is an important complement to CO<sub class="chem">2</sub> action that is essential for limiting the extent of warming. Burning fossil fuel emits reflective sulfate particles that act to cool the planet. The reduction in reflective particles resulting from lower fossil fuel use, an effect known as &ldquo;unmasking,&rdquo; is the reason the &ldquo;CO<sub class="chem">2</sub> only&rdquo; curve in Figure E1 stays above the black line until 2060. Pairing superpollutant mitigation with decarbonization dampens this effect because most measures reduce warming without removing aerosol cooling.</p>
+      <p>This pairing creates an important sequencing opportunity. Rapid superpollutant abatement, achievable in low-cost, quick-turnaround interventions like leak repair and refrigerant management, will extend the scaling time needed for slower, capital-intensive CO<sub class="chem">2</sub> reductions in heavy industry and infrastructure.</p>
     </div>
 
     <!-- ============ SCROLLYTELLING · FIGURE E1 ============
@@ -120,11 +123,11 @@
       <figure class="scrolly-graphic">
         <div class="chartcard">
           <figcaption class="chart-head">
-            <h4 class="exhibit"><b>Figure E1:</b> Projected temperature changes through 2100 resulting from reference scenario, 2 degrees C scenario with mitigation of CO&#8322;-only, and 2 degrees C scenario with mitigation of both CO&#8322; and superpollutants</h4>
+            <h4 class="exhibit"><b>Figure E1:</b> Projected temperature changes through 2100 resulting from reference scenario, 2 degrees C scenario with mitigation of CO<sub class="chem">2</sub>-only, and 2 degrees C scenario with mitigation of both CO<sub class="chem">2</sub> and superpollutants</h4>
             <ul class="chart-key" aria-hidden="true">
               <li data-key="ref"><i class="sw dash" style="--c:var(--c-ref)"></i>Reference Scenario (SSP2-4.5)</li>
-              <li data-key="co2"><i class="sw dash" style="--c:var(--c-co2)"></i>CO&#8322; only 2&deg;C Scenario (SSP1-2.6)</li>
-              <li data-key="sp"><i class="sw solid" style="--c:var(--c-sp)"></i>CO&#8322; + Superpollutants 2&deg;C Scenario (SSP1-2.6)</li>
+              <li data-key="co2"><i class="sw dash" style="--c:var(--c-co2)"></i><span>CO<sub class="chem">2</sub> only 2&deg;C Scenario (SSP1-2.6)</span></li>
+              <li data-key="sp"><i class="sw solid" style="--c:var(--c-sp)"></i><span>CO<sub class="chem">2</sub> + Superpollutants 2&deg;C Scenario (SSP1-2.6)</span></li>
             </ul>
           </figcaption>
           <div class="chart-body" role="img" aria-label="Line chart of projected global temperature change from 2010 to 2100, relative to 1850 to 1900. The reference scenario keeps rising through the century. The CO2-only 2 degree scenario levels off but runs above the reference line until about 2060. The CO2 plus superpollutants 2 degree scenario flattens near 2 degrees from mid-century. Of the 0.9 degrees separating the reference case from the 2 degree scenario in 2100, about half comes from CO2 reductions and half from superpollutant reductions.">
@@ -140,16 +143,16 @@
           <p>Without further mitigation, projected warming keeps climbing through 2100. This business-as-usual path is the reference case.</p>
         </div>
         <div class="step" data-state="2">
-          <p class="step-key"><i class="sw dash" style="--c:var(--c-co2)"></i>CO&#8322; only 2&deg;C Scenario</p>
-          <p>The CO&#8322;-only 2&deg;C scenario bends the curve, yet runs above the reference line until about 2060. Burning less fossil fuel also removes reflective sulfate particles that had been cooling the planet, an effect known as unmasking.</p>
+          <p class="step-key"><i class="sw dash" style="--c:var(--c-co2)"></i><span>CO<sub class="chem">2</sub> only 2&deg;C Scenario</span></p>
+          <p>The CO<sub class="chem">2</sub>-only 2&deg;C scenario bends the curve, yet runs above the reference line until about 2060. Burning less fossil fuel also removes reflective sulfate particles that had been cooling the planet, an effect known as unmasking.</p>
         </div>
         <div class="step" data-state="3">
-          <p class="step-key"><i class="sw solid" style="--c:var(--c-sp)"></i>CO&#8322; + Superpollutants 2&deg;C Scenario</p>
+          <p class="step-key"><i class="sw solid" style="--c:var(--c-sp)"></i><span>CO<sub class="chem">2</sub> + Superpollutants 2&deg;C Scenario</span></p>
           <p>Pairing decarbonization with superpollutant mitigation dampens unmasking, because most measures reduce warming without removing aerosol cooling. Warming levels off near 2&deg;C.</p>
         </div>
         <div class="step" data-state="4">
           <p class="step-key">The 0.9&deg;C gap</p>
-          <p>Of the 0.9&deg;C separating the 2&deg;C scenario from the reference case, roughly half comes from CO&#8322; reductions. The other half comes from cutting superpollutants.</p>
+          <p>Of the 0.9&deg;C separating the 2&deg;C scenario from the reference case, roughly half comes from CO<sub class="chem">2</sub> reductions. The other half comes from cutting superpollutants.</p>
         </div>
       </div>
     </div>
@@ -160,9 +163,9 @@
     <div class="split">
       <div class="col">
         <p><strong class="runin">Companies can&mdash;and must&mdash;be an important part of addressing these potent warmers worldwide.</strong> Companies with substantial superpollutant footprints must take responsibility and reduce them as quickly as possible. But even companies without large amounts of superpollutants in their value chains have opportunities to finance superpollutant elimination projects worldwide through the voluntary carbon market, investing in new facilities, R&amp;D, and sharing best practices. It is vital that all companies take decisive action given the slow pace of government action and the prospect of reaching critical tipping points soon.</p>
-        <p><strong class="runin">Companies are aware of these gases, yet few have committed to reducing them.</strong> A decade of corporate climate action has produced more than 10,000 science-based targets, 1,900 net-zero commitments&mdash;and very few superpollutant strategies. A review of 40 large companies in exposed sectors revealed a large majority mention superpollutants by name in their sustainability reporting, but just a small percentage follow through by setting targets. The story is similar across the corporate sector&mdash;a nearly exclusive focus on CO&#8322; in most net zero portfolios has resulted in insufficient support and attention to superpollutant mitigation projects.</p>
+        <p><strong class="runin">Companies are aware of these gases, yet few have committed to reducing them.</strong> A decade of corporate climate action has produced more than 10,000 science-based targets, 1,900 net-zero commitments&mdash;and very few superpollutant strategies. A review of 40 large companies in exposed sectors revealed a large majority mention superpollutants by name in their sustainability reporting, but just a small percentage follow through by setting targets. The story is similar across the corporate sector&mdash;a nearly exclusive focus on CO<sub class="chem">2</sub> in most net zero portfolios has resulted in insufficient support and attention to superpollutant mitigation projects.</p>
         <p><strong class="runin">The accounting conventions that allowed this gap are closing.</strong> Superpollutants sit almost entirely in Scope 1&mdash;fugitive methane, refrigerant leakage, industrial F-gases, and nitrous oxide from chemical production&mdash;and Scope 3&mdash;agricultural, supplier, and waste emissions. This distinction is relevant because mitigation measures have stalled in Scopes 1 and 3, precisely where superpollutants tend to concentrate. Meanwhile, the latest Science Based Targets initiative (SBTi) Corporate Net-Zero Standard requires near-term Scope 1 targets to cover 100 percent of Scope 1 emissions, with no materiality carve-out and no more combining it with Scope 2. By early 2028, every large company with fugitive methane, refrigerant leakage, or industrial F-gas emissions will hold a stand-alone, fully covered Scope 1 target. The only question is how fast companies can move on superpollutants before that deadline arrives.</p>
-        <p><strong class="runin">Superpollutant abatement is unusually cheap and remarkably reachable.</strong> A significant share of superpollutant abatement carries negative or low net cost, because the abated substance has commercial value or the intervention is a maintenance practice rather than a capital project.<sup class="fn"><a href="#fn2" id="fnref2" aria-label="Endnote 2">2</a></sup> For example, about 39 percent of oil and gas methane abatement pays for itself outright and nearly all of the remainder is cost-effective below $20 per metric ton of CO&#8322;e.<sup class="fn"><a href="#fn3" id="fnref3" aria-label="Endnote 3">3</a></sup> It is even cheaper per ton if you calculate it using GWP-20. Superpollutant emissions also tend to concentrate in identifiable point sources and equipment classes, such as wells and compressor stations, refrigeration and cooling systems, landfills, and nitric and adipic acid plants, rather than diffusing across every combustion process in an economy like for CO&#8322;. Sources that cannot be reached from inside a company&rsquo;s value chain can be reached via voluntary carbon markets where prices are also low relative to other project types and can still be high quality.</p>
+        <p><strong class="runin">Superpollutant abatement is unusually cheap and remarkably reachable.</strong> A significant share of superpollutant abatement carries negative or low net cost, because the abated substance has commercial value or the intervention is a maintenance practice rather than a capital project.<sup class="fn"><a href="#fn2" id="fnref2" aria-label="Endnote 2">2</a></sup> For example, about 39 percent of oil and gas methane abatement pays for itself outright and nearly all of the remainder is cost-effective below $20 per metric ton of CO<sub class="chem">2</sub>e.<sup class="fn"><a href="#fn3" id="fnref3" aria-label="Endnote 3">3</a></sup> It is even cheaper per ton if you calculate it using GWP-20. Superpollutant emissions also tend to concentrate in identifiable point sources and equipment classes, such as wells and compressor stations, refrigeration and cooling systems, landfills, and nitric and adipic acid plants, rather than diffusing across every combustion process in an economy like for CO<sub class="chem">2</sub>. Sources that cannot be reached from inside a company&rsquo;s value chain can be reached via voluntary carbon markets where prices are also low relative to other project types and can still be high quality.</p>
       </div>
       <aside class="sidequote">
         <p class="pull">Companies should act decisively, treating superpollutants not as a footnote to their climate strategy but as its fastest-moving front.</p>
@@ -170,8 +173,8 @@
     </div>
 
     <div class="col">
-      <p><strong class="runin">Companies can pursue numerous opportunities and many proven pathways to make a difference.</strong> As part of this research, the Carbon Containment Lab cataloged 204 mitigation measures&mdash;and the list is growing. Many actions mitigate more than one superpollutant and some also abate CO&#8322;. 60 percent of these measures are mature and ready to scale up, some at a cost of less than $1 per ton or even provide net savings. Others requiring more investment are a natural fit for voluntary carbon markets meeting financial additionality requirements. Not every mitigation measure is equally ready; some require work on standards, methodologies or measurement. The most immediate and scalable opportunities lie where the sources are concentrated, the technology is proven, the cost is low, and additional finance can help scale up operations in the next five years.</p>
-      <p><a href="#measures">Explore all 204 mitigation measures &rarr;</a></p>
+      <p><strong class="runin">Companies can pursue numerous opportunities and many proven pathways to make a difference.</strong> As part of this research, the Carbon Containment Lab <a href="mitigationmeasures/">cataloged 204 mitigation measures&mdash;and the list is growing</a>. Many actions mitigate more than one superpollutant and some also abate CO<sub class="chem">2</sub>. 60 percent of these measures are mature and ready to scale up, some at a cost of less than $1 per ton or even provide net savings. Others requiring more investment are a natural fit for voluntary carbon markets meeting financial additionality requirements. Not every mitigation measure is equally ready; some require work on standards, methodologies or measurement. The most immediate and scalable opportunities lie where the sources are concentrated, the technology is proven, the cost is low, and additional finance can help scale up operations in the next five years.</p>
+      <p><a href="mitigationmeasures/">Explore all 204 mitigation measures &rarr;</a></p>
     </div>
 
     <!-- ============ SCROLLYTELLING · FIGURE E2 ============ -->
@@ -202,7 +205,7 @@
         </div>
         <div class="step" data-state="2">
           <p class="step-key">Five gas families</p>
-          <p>Sorted by the primary gas each one targets, the catalog reaches every superpollutant family. Many measures mitigate more than one, and some also abate CO&#8322;.</p>
+          <p>Sorted by the primary gas each one targets, the catalog reaches every superpollutant family. Many measures mitigate more than one, and some also abate CO<sub class="chem">2</sub>.</p>
         </div>
         <div class="step" data-state="3">
           <p class="step-key">Ready to scale</p>
@@ -217,7 +220,7 @@
 
     <div class="col">
       <p>Companies are finding ways to finance a range of mitigation measures&mdash;mechanisms include the use of market-based instruments such as insetting, environmental attribute certificates, or carbon credits. Companies are also claiming the emission reductions against their target or as part of a broader contribution or compensation claim.</p>
-      <p>In addition, superpollutant co-benefits are already found in decarbonization strategies familiar to companies. Sustainable aviation fuel, greener cement and concrete, and transitioning fleets to battery electric vehicles all have notable superpollutant co-benefits, such as reducing black carbon, nitrous oxide, and tropospheric ozone precursors like volatile organic compounds (VOCs).</p>
+      <p>In addition, superpollutant co-benefits are already found in decarbonization strategies familiar to companies. <strong>Sustainable aviation fuel, greener cement and concrete, and transitioning fleets to battery electric vehicles all have notable superpollutant co-benefits</strong>, such as reducing black carbon, nitrous oxide, and tropospheric ozone precursors like volatile organic compounds (VOCs).</p>
       <p>Table E1 highlights a few select mitigation measures that are uniquely suited for near-term corporate action with high scalability potential.</p>
     </div>
 
@@ -266,7 +269,7 @@
               <td>Resolve key measurement and methodology issues</td>
             </tr>
             <tr>
-              <td>Industrial N&#8322;O</td>
+              <td>Industrial N<sub class="chem">2</sub>O</td>
               <td>Nitrous Oxide</td>
               <td>Spot or Forward purchase of carbon credits</td>
               <td>Resolve key methodology additionality issues</td>
@@ -327,112 +330,23 @@
   </div>
 </section>
 
-<!-- ============ 02 · MITIGATION MEASURES CATALOGUE ============
-     Copy from "For Leff – microsite text on mitigation measures".
-     The catalogue is CCL's Airtable shared view, embedded below.
-     To swap the view, replace the src on the iframe only.
-     PHASE 2: this same slot holds the filterable measure explorer
-     and the case-study links. Nothing above or below it moves.
+<!-- ============ 02 · MITIGATION MEASURES ============
+     Intro to the catalogue. The Airtable embed, field definitions and
+     maturity levels moved to their own page: /mitigationmeasures
+     (mitigationmeasures/index.html). Every catalogue link on this page
+     points there.
      ========================================================= -->
 <section class="chapter tint" id="measures" style="--accent:var(--rust)">
-  <div class="sechead shell">
+  <div class="sechead shell solo">
     <div class="sechead-grid">
       <div class="kicker">
         <h2>Mitigation<br>Measures</h2>
         <p class="small">200+ measures &middot; Appendix B</p>
       </div>
       <div>
-        <p class="lede">The Superpollutant Mitigation Measures Catalogue: 200+ ways to cut methane, HFCs, black carbon, N&#8322;O, and tropospheric ozone.</p>
-        <p>Superpollutants drive roughly <a href="https://www.ccacoalition.org/news/super-pollutants" target="_blank" rel="noopener">half of today&rsquo;s warming</a>, yet the solutions to cut them are scattered across dozens of technical reports, methodologies, and pilot projects. To help shine light on these important climate solutions, the CC Lab team identified, compiled, and organized over 200 superpollutant mitigation measures into a single, structured database. Measures are classified by primary superpollutant gas affected, source type, whether there are enabling standards in the Voluntary Carbon Market (VCM), or value chain emissions mitigation areas. We also indicate the level of maturity of these pathways in terms of how ready each is for deployment today. Definitions of each field can be found below, in the table following the database. More information about how this was developed can be found in Appendix B of the Roadmap.</p>
-        <p>The Superpollutant Mitigation Measures Catalogue is intended to make it easier for companies, investors, and policymakers to see not just what can be done, but how to act on it. Notably, roughly 70% of measures identified address more than one superpollutant at once, or pair superpollutant mitigation with direct CO&#8322; reductions.</p>
-        <p>The CC Lab intends to continuously expand, refine, and update this database, adding examples and providing even more information on each.</p>
-        <p>We look forward to learning about and featuring additional measures and data. As you explore the data, let us know if you have measures, sources, updates, or examples to add at: <a href="mailto:superpollutants@cclab.org">superpollutants@cclab.org</a></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="body shell" style="padding-top:0">
-    <p class="exhibit" id="catalogue-title"><b>Superpollutant Mitigation Measures Catalogue</b></p>
-    <div class="embed">
-      <div class="embed-frame">
-        <iframe class="airtable-embed"
-          src="https://airtable.com/embed/appDRXqC3gHRr0Tt7/shr7pL8QE6KIpwSjK?viewControls=on"
-          title="Superpollutant Mitigation Measures Catalogue (Airtable)"
-          aria-labelledby="catalogue-title"
-          loading="lazy"
-          frameborder="0"
-          width="100%" height="533"></iframe>
-      </div>
-    </div>
-
-    <div class="deftable">
-      <p class="exhibit" id="fields-title"><b>Field Definitions</b></p>
-      <div class="scrollx">
-        <table class="rpt defs" aria-labelledby="fields-title">
-          <tbody>
-            <tr><th scope="row">Mitigation Measure</th><td>A physical measure taken to mitigate superpollutants (not a financing, policy, or enabling mechanism).</td></tr>
-            <tr><th scope="row">Source Type</th><td>A classification of the main sources of superpollutants to align with the IPCC Guidelines for National Greenhouse Gas Inventories. In some cases these are tailored to describe the sub-sector most closely tied to the mitigation measure.</td></tr>
-            <tr><th scope="row">Primary Superpollutant</th><td>The primary gas being mitigated through the measure</td></tr>
-            <tr><th scope="row">Other Superpollutants Addressed</th><td>Other superpollutants mitigated through the measure in addition to the primary superpollutant</td></tr>
-            <tr><th scope="row">Maturity Level</th><td>A value between one and six indicating how developed, reliable, and ready a technology or process is for widespread use. Each level is further defined below.</td></tr>
-            <tr><th scope="row">Voluntary Carbon Markets Status</th><td>Availability of methodologies in the Voluntary Carbon Market which incentivise this measure. Active indicates one or more active methodologies; Inactive indicates methodologies that have been retired or invalidated; In development indicates methodologies in progress; Not Available indicates a lack of all of the above.</td></tr>
-            <tr><th scope="row">Value Chain Market Mechanism</th><td>This column shows which market-based value chain actions might be appropriate for the measure, including: a standard existing for an EAC or book-and-claim system; a standard is in development; the activity is well suited to supplier engagement; or the activity is unlikely to be suited to these mechanisms.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="deftable">
-      <p class="exhibit" id="maturity-title"><b>Maturity Level Definitions</b></p>
-      <div class="scrollx">
-        <table class="rpt maturity" aria-labelledby="maturity-title">
-          <thead>
-            <tr>
-              <th scope="col">Maturity Level</th>
-              <th scope="col">Activities at this Maturity Level</th>
-              <th scope="col">Mechanism of Corporate Action</th>
-              <th scope="col">Example Strategic Corporate Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><span class="lvl">1</span>Concept &amp; Research</th>
-              <td data-label="Activities at this Maturity Level">Laboratory-scale testing, academic research, and theoretical modeling. Low Technology Readiness Level (TRL 1&ndash;3); high financial and technical risk.</td>
-              <td data-label="Mechanism of Corporate Action"><ul><li>R&amp;D Funding (internal)</li><li>Sponsored Research (external)</li><li>Sponsor Innovation Prizes</li></ul></td>
-              <td data-label="Example Strategic Corporate Action">Fund university labs or early-stage accelerators directly to prove basic chemistry and unlock the intellectual property needed for new tech.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="lvl">2</span>Proof of Concept</th>
-              <td data-label="Activities at this Maturity Level">Small pilot plants, prototype modeling, and life-cycle assessment (LCA) projections. Medium-low readiness (TRL 4&ndash;6); economic viability unproven.</td>
-              <td data-label="Mechanism of Corporate Action"><ul><li>Corporate Venture Capital (CVC) investment</li><li>Host-Site Provision</li><li>Sponsor Innovation Prizes</li></ul></td>
-              <td data-label="Example Strategic Corporate Action">Invest seed equity through CVC arms to build early prototype hardware. Provide an active physical corporate asset to host the first field pilot.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="lvl">3</span>Demonstration &amp; Early Deployment</th>
-              <td data-label="Activities at this Maturity Level">First-of-a-kind commercial projects, early regulatory approvals, and niche adoption. Medium-high readiness (TRL 7&ndash;8); relies on subsidies, grants, or early adopters.</td>
-              <td data-label="Mechanism of Corporate Action"><ul><li>Project Equity Investments</li><li>VCM Forward Offtake Agreements</li></ul></td>
-              <td data-label="Example Strategic Corporate Action">Invest direct equity into first-of-a-kind (FOAK) infrastructure facilities. Back this with a VCM Forward Offtake contract to guarantee an anchor customer.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="lvl">4</span>Early Adoption &amp; Capital Chasm</th>
-              <td data-label="Activities at this Maturity Level">Early-stage commercial rollout, limited to a few pioneering projects globally; focus on reducing high initial capital expenditures. TRL 8&ndash;9. Chasm because standard commercial banks view it as too risky, requiring specialized infrastructure funds, private equity, or loan guarantees.</td>
-              <td data-label="Mechanism of Corporate Action"><ul><li>Project Equity Investments</li><li>VCM Forward Offtake Agreements</li><li>Market-Based Instruments (Book &amp; Claim / EACs)</li><li>VCM Spot Market Credit Purchases</li></ul></td>
-              <td data-label="Example Strategic Corporate Action">Purchase issued spot market credits from already-established projects to offset immediate corporate footprint gaps while long-term infrastructure scales up.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="lvl">5</span>Scaling/ Commercialization</th>
-              <td data-label="Activities at this Maturity Level">Mass manufacturing, standardized supply chains, declining unit costs, and policy backing. Mature (TRL 9); Some standard commercial financing available.</td>
-              <td data-label="Mechanism of Corporate Action"><ul><li>VCM Spot Market Credit Purchases</li><li>Supplier Engagement Programs</li><li>Standards Writing/Engagement</li></ul></td>
-              <td data-label="Example Strategic Corporate Action">Use procurement mandates and low-interest supply-chain financing to force smaller tier-1 and tier-2 partners to adopt mature, off-the-shelf upgrades.</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="lvl">6</span>Optimization &amp; System Integration</th>
-              <td data-label="Activities at this Maturity Level">Continuous technological refinement, circular-economy recycling of materials, and fully integrated grid/infrastructure support.</td>
-              <td data-label="Mechanism of Corporate Action"><ul><li>Supplier Engagement Programs (global)</li><li>Standards Writing/Engagement (global)</li><li>Policy Advocacy &amp; Regulatory Support</li></ul></td>
-              <td data-label="Example Strategic Corporate Action">Lobby for codes, mandates, and bans/standards to turn proven Level 5 solutions into mandatory, industry-wide legal requirements.</td>
-            </tr>
-          </tbody>
-        </table>
+        <p class="lede">The Superpollutant Mitigation Measures Catalogue: 200+ ways to cut methane, HFCs, black carbon, N<sub class="chem">2</sub>O, and tropospheric ozone.</p>
+        <p>Superpollutants drive roughly <a href="https://www.ccacoalition.org/news/super-pollutants" target="_blank" rel="noopener">half of today&rsquo;s warming</a>, yet the solutions to cut them are scattered across dozens of technical reports, methodologies, and pilot projects. To help shine light on these important climate solutions, the CC Lab team identified, compiled, and organized over 200 superpollutant mitigation measures into a single, structured database. Measures are classified by primary superpollutant gas affected, source type, whether there are enabling standards in the Voluntary Carbon Market (VCM), or value chain emissions mitigation areas. We also indicate the level of maturity of these pathways in terms of how ready each is for deployment today.</p>
+        <p class="sec-cta"><a class="btn btn-solid" href="mitigationmeasures/">Explore the catalogue</a></p>
       </div>
     </div>
   </div>
@@ -553,7 +467,7 @@
               <li><div class="tocrow head app"><span class="t">Appendix E<span class="sub">Selecting Carbon Credits: Criteria and Application</span></span><span class="pg">110</span></div></li>
               <li><div class="tocrow head app"><span class="t">Appendix F<span class="sub">Carbon Credit Case Studies</span></span><span class="pg">116</span></div>
                 <ul class="tocsub indent">
-                  <li><div class="tocrow"><span class="t">Industrial N&#8322;O Abatement</span><span class="pg">117</span></div></li>
+                  <li><div class="tocrow"><span class="t">Industrial N<sub class="chem">2</sub>O Abatement</span><span class="pg">117</span></div></li>
                   <li><div class="tocrow"><span class="t">ODS and HFC Destruction</span><span class="pg">119</span></div></li>
                   <li><div class="tocrow"><span class="t">Rice Methane Mitigation</span><span class="pg">121</span></div></li>
                   <li><div class="tocrow"><span class="t">Anaerobic Digesters</span><span class="pg">123</span></div></li>
